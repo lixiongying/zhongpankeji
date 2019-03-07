@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<!--<link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/index.css" />-->
+		<link rel="stylesheet" type="text/css" href="css/nav_table.css" />
+		<link rel="stylesheet" href="./css/cloak.css" />
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<!--<script src="js/vue.js"></script>-->
+		<!--<script type="text/javascript" src="js/page/index.js" ></script>-->
+		<script src="js/part/mui.min.js"></script>
+
+		<style type="text/css">
+			.tartup {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.skip {
+				position: fixed;
+				top: 0.2rem;
+				right: 0.5rem;
+				width: 2.2rem;
+				height: 1rem;
+				border: 1px solid deepskyblue;
+				text-align: center;
+				line-height: 1rem;
+				color: deepskyblue;
+			}
+			
+			.tartup {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.skip {
+				position: fixed;
+				top: 0.3rem;
+				right: 0.6rem;
+				width: 2.4rem;
+				height: 1.2rem;
+				border: 1px solid deepskyblue;
+				text-align: center;
+				line-height: 1.2rem;
+				color: deepskyblue;
+				border-radius: 0.2rem;
+			}
+			
+			.index {
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+			
+			.img01 {
+				width: 100vw;
+				height: 100vh;
+			}
+			.index .sendCode{
+				position: absolute;
+				top: 20px;
+				right: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="index">
+		    <span class="sendCode" onclick="showIndex()"></span>
+			<a onclick="showIndex()"><img src="img/index.jpg" class="img01" /></a>
+		</div>
+		<nav class="mui-bar mui-bar-tab b" id="navs" style="display: none;">
+			<a class="mui-tab-item mui-active " href="index.html">
+				<span class="nav_img1 img1"></span>
+				<span class="mui-tab-label bot">首页</span>
+			</a>
+			<a class="mui-tab-item a2" href="stone_street.html">
+				<span class="nav_img1 img2"></span>
+				<span class="mui-tab-label bot">石材一条街</span>
+			</a>
+			<a class="mui-tab-item a3" href="sand_table.html">
+				<span class="nav_img1 img3"></span>
+				<span class="mui-tab-label bot">电子沙盘</span>
+				<!--<div class="num">0</div>-->
+			</a>
+			<a class="mui-tab-item a4" href="my_page.html">
+				<span class="nav_img1 img4"></span>
+				<span class="mui-tab-label bot">个人</span>
+			</a>
+		</nav>
+		<input type="hidden" name="" id="index" value="0" />
+	</body>
+
+	<script type="text/javascript" charset="utf-8">
+		window.onload=function(){
+			timeOut()
+		}
+		function showIndex() {
+			$('.index').hide()
+			$('.mui-bar').show()
+			showNav();
+			
+		}
+        function timeOut(){
+        	var time = 3;
+ 			var countdown = setInterval(function(){
+ 				$('.sendCode').html(time+'s'+' '+'跳过');
+	 			if(time==0){	 				
+	 				clearInterval(countdown);	 			
+					showIndex();
+	 			}
+	 			time--
+ 			},1000);
+        }
+
+		function showNav() {
+			var subPages = ['index.html', 'stone_street.html', 'sand_table.html', 'my_page.html'];
+			//获取当前显示窗口
+			var self = plus.webview.currentWebview();
+
+			//定义子窗口打开的样式
+
+			var subPageStyle = {
+				top: 0,
+				bottom: '50px',
+			};
+
+			//循环创建子窗口
+			for(var i = 0; i < subPages.length; i++) {
+				var sub = plus.webview.create(subPages[i], subPages[i], subPageStyle);
+				//将所有的盒子隐藏起来
+				sub.hide();
+
+				//将创建好的窗口追加到主窗口中
+				self.append(sub);
+
+			}
+			//默认显示第一个窗口
+			plus.device.setWakelock(true);
+			plus.webview.show(subPages[0]);
+		}
+//		mui.plusReady(function() {
+//         var subPages = ['index.html', 'stone_street.html', 'sand_table.html', 'my_page.html'];
+//			//获取当前显示窗口
+//			var self = plus.webview.currentWebview();
+//
+//			//定义子窗口打开的样式
+//
+//			var subPageStyle = {
+//				top: 0,
+//				bottom: '50px',
+//			};
+//
+//			//循环创建子窗口
+//			for(var i = 0; i < subPages.length; i++) {
+//				var sub = plus.webview.create(subPages[i], subPages[i], subPageStyle);
+//				//将所有的盒子隐藏起来
+//				sub.hide();
+//
+//				//将创建好的窗口追加到主窗口中
+//				self.append(sub);
+//
+//			}
+//			//默认显示第一个窗口
+//			plus.device.setWakelock(true);
+//			plus.webview.show(subPages[0]);
+//		});
+
+		//给a绑定事件
+		mui('.mui-bar').on("tap", "a", function(e) {
+			//通过每个被点击的a标签去获取定义的href属性值 
+			var targetPage = this.getAttribute("href");
+			//将对应的子页面显示出来  
+			//show(子页面id,采用的动画名称,动画执行时间【单位毫秒】)
+			plus.webview.show(targetPage, "fade-in", 100);
+
+		});
+
+		function stoneStreet() {
+
+			$('.mui-tab-item').each(function(index) {
+
+				if(index == 1) {
+
+					$(this).addClass('mui-active');
+				} else {
+
+					$(this).removeClass('mui-active');
+				}
+			})
+			plus.webview.show('stone_street.html', "fade-in", 100);
+		}
+
+		function showStreet() {
+			//			window.location.href('stone_street.html')
+			$('.mui-tab-item').each(function(index) {
+
+				if(index == 1) {
+
+					$(this).addClass('mui-active');
+				} else {
+
+					$(this).removeClass('mui-active');
+				}
+			})
+			plus.webview.show('stone_street.html', "fade-in", 100);
+		}
+	</script>
+
+</html>

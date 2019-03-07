@@ -1,0 +1,50 @@
+/*@公共样式表*/
+/*====================公共样式======================*/
+*{ margin: 0; padding: 0;touch-action: pan-y;}
+img { border: 0 none; vertical-align: center; }
+ul, li { list-style-type: none;}
+h1, h2, h3, h4, h5, h6 { font-size: 14px; }
+body, input, select, button, textarea { font-size: 14px; font-family:"微软雅黑";  }	/*设置默认字体*/
+button { cursor: pointer; }
+i, em, cite { font-style: normal; }
+aside section,.body{display:block; width:1000px; margin:0 auto;}
+a, a:link { color: #000; text-decoration: none; }/*设置a标签基本样式与伪类选择器设置*/
+a:visited {}
+a:active, a:hover { text-decoration: none; color:#000000; }
+a:focus { outline: none; } 
+
+/* 常用字体颜色或者背景着色 */
+.orange { color:#F26E01;}
+
+/* 用于清除浮动的样式 */
+.clear:after {
+	display: block;
+	content: '清除浮动';
+	height: 0;
+	visibility: hidden;
+	clear:both;
+}
+.header{
+	width: 100%;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	text-align: center;
+	color: #fff;
+	background: #373737;
+}
+.header em{
+	display: block;
+	width: 2.3rem;
+	height: 2.3rem;
+	background: url('../../img/common/out_w.png') no-repeat;
+	background-size:70%;
+	position: absolute;
+	top: 1rem;
+	left: 0.5rem;
+}
+.header p{
+	color: #fff;
+	font-size: 1.3rem;
+	
+}
+.onclick{color: #0195dd;}

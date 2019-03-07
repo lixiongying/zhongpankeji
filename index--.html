@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>中磐科技</title>
+    <link rel="stylesheet" href="css/mui.min.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script type="text/javascript" src="js/mui.min.js" ></script>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+    <script src="js/vue.js"></script>
+    <script type="text/javascript" src="js/page/index.js" ></script>
+   
+</head>
+<body>
+
+
+<div id="slider" class="mui-slider ban">
+	  <div class="mui-slider-group mui-slider-loop">
+	    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+	    <div class="mui-slider-item mui-slider-item-duplicate">
+	      <a>
+	        <img src="img/ban1.png">
+	      </a>
+	    </div>
+	    <!-- 第一张 -->
+	    <div class="mui-slider-item">
+	      <a >
+	        <img src="img/ban1.png">
+	      </a>
+	    </div>
+	    <!-- 第二张 -->
+	    <div class="mui-slider-item">
+	      <a >
+	        <img src="img/ban2.png">
+	      </a>
+	    </div>
+	    <!-- 第三张 -->
+	    <div class="mui-slider-item">
+	      <a >
+	        <img src="img/ban3.png">
+	      </a>
+	    </div>
+	    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+	    <div class="mui-slider-item mui-slider-item-duplicate">
+	      <a >
+	        <img src="img/ban1.png">
+	      </a>
+	    </div>
+	  </div>
+	  <div class="mui-slider-indicator">
+	    <div class="mui-indicator mui-active"></div>
+	    <div class="mui-indicator"></div>
+	    <div class="mui-indicator"></div>
+	  </div>
+	  
+	</div>
+
+
+	
+<div class="index-list">
+	<ul class="ul-01">
+		<li>
+		<a href="encyclopedias.html">
+			<img src="img/icon1.jpg" class="img03"/>
+			<p>石材百科</p>
+		</a>
+		</li>
+		<li>
+		<a href="stone.html">
+			<img src="img/icon2.jpg" class="img03"/>
+			<p>天天石材展</p>
+		</a>
+		</li>
+		<li>
+		<a href="commodit.html">
+			<img src="img/icon3.jpg" class="img03"/>
+			<p>清货信息</p>
+		</a>
+		</li>
+		<li>
+		<a href="new.html">
+			<img src="img/icon4.jpg" class="img03"/>
+			<p>行业资讯</p>
+		</a>
+		</li>
+	</ul>
+</div>
+</div>
+<!--数据接口-->
+<div id="index">
+<!--内容-->
+<div class="content2">
+	<p class="index-p01"><span class="index-span1">清货信息</span><span class="index-span2" onclick="window.location.href='commodit.html'">更多</span></p>
+	<ul class="index-ul02">
+		<li v-for="(list,index) in qingList.mgooImage" @click="go(mgooId[index])">
+			<a>
+					<img :src=url+qingList.mgooImage[index] class="img02"/>				
+					<p class="ul02-p02">{{qingList.mgooClearExplain[index]}}</p>					
+					<p class="ul02-p04">清货价:{{qingList.mgooMaximumPrice[index]}}/㎡</p>		
+			</a>
+		</li>
+		<!--<li>
+			<a href="business.html">
+				<img src="img/index-qing2.png" class="img02"/>				
+					<p class="ul02-p02">大量路基石</p>					
+					<p class="ul02-p04">清货价：253/㎡</p>		
+			</a>
+		</li>
+		<li>
+			<a href="business.html">
+				<img src="img/index-qing3.png" class="img02"/>				
+					<p class="ul02-p02">黑灰石边料</p>					
+					<p class="ul02-p04">清货价：253/㎡</p>		
+			</a>
+		</li>
+		<li>
+			<a href="business.html">
+				<img src="img/index-qing4.png" class="img02"/>				
+					<p class="ul02-p02">各种石材边料，大量路基石</p>					
+					<p class="ul02-p04">清货价：253/㎡</p>		
+			</a>
+		</li>-->
+	</ul>
+</div>
+
+
+
+<div class="content3">
+	<p class="index-p01"><span class="index-span1">推荐企业</span><span class="index-span2" onclick="window.location.href='stone_street.html'">更多</span></p>
+	<ul class="index-ul03">
+		<li v-for="huolist in huoList.stores" @click="gotos(huolist.mstoId)">
+			<a>
+				<div class="div-left"><img :src=url+huolist.mstoImage class="img01"/></div>
+				<div class="div-right">
+				<p class="ul03-p01">{{huolist.mstoName}}</p>
+				<p class="ul03-p02">{{huolist.mstoPhone}}</p>
+				<p class="ul03-p02 p-ht1">{{huolist.mstoAddress}}</p>
+				</div>
+			</a>
+		</li>
+		<!--<li>
+			<a href="business.html">
+				<div class="div-left"><img src="img/co1.png" class="img01"/></div>
+				<div class="div-right">
+				<p class="ul03-p01">天玺石材有限公司</p>
+				<p class="ul03-p02">15842411546</p>
+				<p class="ul03-p02 p-ht1">云浮市云安县河口三街5号</p>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="business.html">
+				<div class="div-left"><img src="img/co2.png" class="img01"/></div>
+				<div class="div-right">
+				<p class="ul03-p01">长寿县东盈石材厂</p>
+				<p class="ul03-p02">15842411546</p>
+				<p class="ul03-p02 p-ht1">云浮市云安县河口三街5号</p>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="business.html" class="nobor">
+				<div class="div-left"><img src="img/co3.png" class="img01"/></div>
+				<div class="div-right">
+				<p class="ul03-p01">长城国际石材有限公司</p>
+				<p class="ul03-p02">15842411546</p>
+				<p class="ul03-p02 p-ht1">云浮市云安县河口三街5号</p>
+				</div>
+			</a>
+		</li>		-->
+	</ul>
+</div>
+
+
+
+<div class="footer">
+	<ul class="footer-ul">
+		<li>
+			<a href="index.html">
+				<img src="img/fot1-1.png" class="fot-img"/>
+				<p class="onclick">首页</p>
+			</a>
+		</li>
+		<li>
+			<a href="stone_street.html">
+				<img src="img/fot2.png" class="fot-img"/>
+				<p>石材一条街</p>
+			</a>
+		</li>
+		<li>
+			<a href="sand_table.html">
+				<img src="img/fot3.png" class="fot-img"/>
+				<p>电子沙盘</p>
+			</a>
+		</li>
+		<li>
+			<a href="my_page.html">
+				<img src="img/fot4.png" class="fot-img"/>
+				<p>我的</p>
+			</a>
+		</li>
+	</ul>
+</div>
+
+
+
+<!--数据接口尾部-->
+</div>
+</body>
+<script type="text/javascript">
+//获得slider插件对象
+var gallery = mui('.mui-slider');
+gallery.slider({
+  interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+});
+</script>
+</html>

@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>电子沙盘</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+		
+		<link rel="stylesheet" type="text/css" href="css/part/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/part/sand _table.css"/>
+		<link href="css/part/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="./css/cloak.css" />
+		
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/part/md5.js"></script>
+		<script type="text/javascript" src="js/part/sand_table.js"></script>
+		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+		<script src="js/part/mui.min.js"></script>
+		<script type="text/javascript" src="js/part/vue.js"></script>
+	    <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=4FTBZ-VX7KR-NNRWO-WEMXJ-A6BN6-QUB7J"></script>
+	    <!--<script type="text/javascript">
+	    	var go_business=function(){
+				console.log(sondf)
+			}
+	    </script>-->
+</head>
+<body>
+	<div id="myadd" v-cloak>
+	<header>  
+			<div class="header_top">
+				<div class="header_top_sou" >
+					<div >
+						<i></i>
+						<input placeholder="输入关键词"></inptu>
+					</div>
+				</div>
+			</div>
+			<div class="header_bottom">
+				<div>
+					<em></em>
+					<span>推荐(<i></i>)</span>
+				</div>
+				<div>
+					<em></em>
+					<span>锯厂(<i></i>)</span>
+				</div>
+				<div>
+					<em></em>
+					<span>补磨厂(<i></i>)</span>
+				</div>
+				<div>
+					<em></em>
+					<span>桥切异型厂(<i></i>)</span>
+				</div>
+				<div>
+					<em></em>
+					<span>土耳其货堆场(<i></i>)</span>
+				</div>
+				<div>
+					<em></em>
+					<span>伊朗货堆场(<i></i>)</span>
+				</div>
+			</div>
+			<div  class="header_show">
+				<em></em>
+				<div class="show">
+					<div class="mui-slider">
+					  	<div class="mui-slider-group">
+					    <!--第一个内容区容器-->
+						    <div class="mui-slider-item">
+						      	<p>云城区河口利隆石材1231231312312</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+						    </div>
+						    <!--第二个内容区-->
+						    <div class="mui-slider-item">
+						      	<p>云城区河口利隆石材1231231312312</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+								<p>云城区河口利隆石材</p>
+						    </div>
+					  	</div>
+					</div>
+				</div>
+				<div class="header_show_o">
+					<div class="click"></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div  class="header_show_bg"></div>
+			</div>
+			
+		</header>
+		
+	<main>
+		<div id="mymap" style="height: 500px"></div>
+	</main>
+    <!--<footer>
+			<div class="footer">
+				<ul class="footer-ul">
+					<li>
+						<a href="index.html">
+							<img src="img/fot1.png" class="fot-img"/>
+							<p>首页</p>
+						</a>
+					</li>
+					<li>
+						<a href="stone_street.html">
+							<img src="img/fot2.png" class="fot-img"/>
+							<p>石材一条街</p>
+						</a>
+					</li>
+					<li>
+						<a href="sand_table.html">
+							<img src="img/fot3-3.png" class="fot-img"/>
+							<p class="onclick">电子沙盘</p>
+						</a>
+					</li>
+					<li>
+						<a href="my_page.html">
+							<img src="img/fot4.png" class="fot-img"/>
+							<p>我的</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</footer>-->
+
+	</div>
+
+
+    <!--<script type="text/javascript">
+        console.log(returnCitySN,returnCitySN["cip"]+','+returnCitySN["cname"])//获取ip可进行ip定位
+    </script>-->
+      <script type="text/javascript">
+	    	var go_business=function(){
+				console.log(sondf)
+			}
+	    </script>
+</body>
+</html>

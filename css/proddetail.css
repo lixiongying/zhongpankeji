@@ -1,0 +1,84 @@
+*{touch-action: pan-y;}
+.lun-p{ position: absolute; left: 20px; top:20px; display:flex; flex-wrap: wrap; width: 100%;}
+.lun-p a img{width: 40.5px;height: 40.5px;}
+.return{ width: 63%;}
+.fen{ width: 15%;}
+.ul01{ margin: 10px;}
+.zang{ width: 15%; margin-right: 20px;}
+.li-01{ font-size: 16px; color: #484848;}
+.li-02{ color: #7f7f7f; font-size: 13px;}
+.li-02 span{ color: #0095dd;}
+.bg{ background-color: #f8f8f8; height: 10px;}
+.ul02{ margin: 0 20px; }
+.ul02 li{ line-height: 50px; border-bottom: 1px solid #eee; display: flex; 
+ font-size: 14px;}
+.ul02 li:last-child{ border-bottom: none;}
+.ul02 li span:first-child{ color: #666;}
+.p01{ display: flex; justify-content: space-between; 
+background-color: #f8f8f8; line-height: 40px; padding: 0 20px;}
+.p01 img{ width: 3px;height: 18px;position: relative;top: 4px;left:-5px;}
+.p01 span{ padding-left: 5px; font-size: 15px;color: #333;}
+.p01 a{ color: #999;}
+.ul03{ margin: 0 20px;}
+.ul03 li{ display: flex; flex-wrap: wrap; border-bottom: 1px solid #eee; padding: 15px 0 8px 0;}
+.ul03 li:last-child{ border-bottom: none;}
+.div-left{ width: 30%;}
+.div-right{ width: 65%; margin-left: 10px;}
+.p02{ font-size: 14px; color: #323232; margin-top: -4px;}
+.p03{ font-size: 12px; color: #929292;}
+.mui-slider-indicator .mui-active.mui-indicator {
+    background: #ff8400;
+}
+.mui-slider-indicator .mui-indicator{ background: #eee; box-shadow: 0 0 0px 0px #eee; 
+-webkit-box-shadow:0 0 0px 0px #eee;}
+
+#share_box{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #fff;
+	width: 100%;
+	height: 7rem !important;
+	z-index: 2;
+	display: none;
+}
+.share_bg{
+	width:30rem ;
+	height: 50rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 1;
+	display: none;
+	
+}
+.layui-m-layercont{
+	height: 5rem  !important;
+	line-height 5rem  !important;
+}
+.social-share{
+	margin:2.5rem 0 0 0 !important;
+}
+.social-share-icon{
+	width: 3rem !important;
+	height: 3rem !important;
+	margin:  0 0.5rem !important;
+}
+.social-share-icon::before{
+	font-size: 2rem;
+	position: relative;
+	top: 0.5rem;
+}
+.img01{ width: 100%; height: 4.7rem;}
+.iimg{
+	height: 13rem !important;
+}
+.iimg img{
+	height: 13rem !important;
+}
+.bg_tis{width: 100% ;height: 100%;position: fixed ;top: 0 ;left: 0 ;z-index: 10;display: none;}
+.bg_tis div{width: 22%;padding: 0 0 10px 0;background: rgba(0,0,0,0.8);position: absolute;top:25%;left: 40%;border-radius: 8px;overflow: hidden;}
+.bg_tis div p{width: 80%;text-align:center;margin: 0.5rem auto 0 auto;color: #fff;font-size: 1.1rem; font-size: 15px;}
+.img_look{display:none;position: fixed;top: 0;left: 0;background: rgba(0,0,0,0.7);width: 100%;height: 100%;z-index:100;}
+.img_look img{position: absolute;top: 30%;left: 0;width: 100%;height: auto;}

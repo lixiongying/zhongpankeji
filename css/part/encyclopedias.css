@@ -1,0 +1,291 @@
+.header_top{
+	height: 3.5rem;
+	background: #373737;
+}
+.header_top_out{
+	width: 2rem;
+	height: 2rem;
+	color: #fff;
+	position: absolute;
+	top:1rem;
+	left:0.6rem;
+	
+}
+.header_top_out img{
+	width: 70%;
+	height: 70%;
+}
+.header_top_sou{
+	width: 80%;
+	height: 2.3rem;
+	line-height: 2.8rem;
+	margin: 0 auto 0 auto ;
+	background: #fff;
+	border-radius: 4px;
+	position: relative;
+	left: 1rem;
+	top: 0.6rem;
+	z-index: 99;
+}
+.header_top_sou div i{
+	display: block;
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	top: 0.45rem;
+	left: 0.4rem;
+	background: url('../../img/encyclopedias/sou.png') no-repeat;
+	background-size: 90%;
+}
+.header_top_sou div input{
+	width:70%;
+	color: #333;
+	font-size: 17px;
+	margin:  0 0 0 2.2rem;
+	border: none;
+}
+::-webkit-input-placeholder{
+	color:#e3e3e3
+}
+.header_title{
+	width: 100%;
+	position: relative;
+	background: #fff;
+	display: flex;
+	z-index: 80;
+	border-bottom: 1px solid #ddd;
+	
+	
+}
+.header_title ul{
+	width: 33.3%;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	background: #fff;
+	text-align: center;
+	z-index: 98;
+}
+.header_title ul:nth-of-type(1){
+	border-right: 1px solid #ddd;
+}
+.header_title ul:nth-of-type(2){
+	border-right: 1px solid #ddd;
+}
+.header_title li a{
+	display: block;
+	width: 100%;
+	color: #333;
+	font-size: 1rem;
+	font-weight: 400;
+	background: #fff;
+	/*overflow: hidden;*/
+}
+.header_title li a:hover{
+	color: #333;
+}
+.header_title li a em{
+	display: inline-block;
+	width: 1.3rem;
+	height: 0.7rem;
+	margin:  0 0 0 0.4rem ;
+	background: url('../../img/encyclopedias/bottom.png');
+	background-size: 90%;
+	background-repeat: no-repeat;
+}
+.header_title .nav_top em{
+	background: url('../../img/encyclopedias/top.png');
+}
+/*头部隐藏弹框*/
+.header_title_nav{
+	width: 100%;
+	background: #fff;
+	position: absolute;
+	border-bottom: 1px solid #f8f8f8;
+	padding:  0 0 1rem 0;
+	top: 2.55rem;
+	left: 0;
+	/*display: none;*/
+}
+.header_title_nav p{
+	width: 29.3%;
+	height: 1.8rem;
+	line-height: 1.8rem;
+	border-radius: 0.2rem;
+	float: left;
+	border: 1px solid rgba(200,200,200,1);
+	margin:  1rem 2% 0rem 2%;
+	color: #333;
+	font-size: 0.9rem;
+	cursor:pointer 
+}
+/*隐藏开关*/
+.header_title ul:nth-of-type(1) .header_title_nav{
+	/*display: none;*/
+}
+.header_title ul:nth-of-type(2) .header_title_nav{
+	/*display: none;*/
+}
+.header_title ul:nth-of-type(2) p{
+	width: 10%;
+}
+.header_title ul:nth-of-type(3) .header_title_nav{
+	/*display: none;*/
+}
+
+.header_title ul:nth-of-type(3) .header_title_nav p{
+	position: relative;
+}
+.header_title ul:nth-of-type(3) p{
+	width: 20%;
+	padding:  0 0 0 5%;
+}
+.header_title ul:nth-of-type(3) .header_title_nav em{
+	display: block;
+	width: 1.4rem;
+	height: 1.4rem;
+	border-radius: 50%;
+	border: 1px solid rgba(0,0,0,0.1);
+	position: absolute;
+	top: 10%;
+	left: 5%;
+
+}
+
+/*颜色表的颜色em背景*/
+.header_title ul:nth-of-type(3) .header_title_nav p:nth-of-type(1) em{
+	background: url(../../img/encyclopedias/radius1.png) no-repeat -2px -2px;
+}
+.header_title ul:nth-of-type(3) .header_title_nav p:nth-of-type(2) em{
+	background: url(../../img/encyclopedias/radius2.png) no-repeat -2px -2px;
+}
+.header_title ul:nth-of-type(3) .header_title_nav p:nth-of-type(3) em{
+	background: url(../../img/encyclopedias/radius3.png) no-repeat -2px -2px;
+}
+.header_title ul:nth-of-type(3) .header_title_nav p:nth-of-type(4) em{
+	background: url(../../img/encyclopedias/radius4.png) no-repeat -4px -4px;
+}
+.header_title ul:nth-of-type(3) .header_title_nav p:nth-of-type(5) em{
+	background: url(../../img/encyclopedias/radius5.png) no-repeat -2px -2px;
+}
+.header_title ul:nth-of-type(3) .header_title_nav p:nth-of-type(6) em{
+	background: #949494;
+}
+.header_title ul:nth-of-type(3) .header_title_nav p:nth-of-type(7) em{
+	background: #fff;
+}
+.header_title ul:nth-of-type(3) .header_title_nav p:nth-of-type(8) em{
+	background: black;
+}
+.header_title ul:nth-of-type(3) .header_title_nav p:nth-of-type(9) em{
+	background: #603813;
+}
+.header_title ul:nth-of-type(3) .header_title_nav p:nth-of-type(10) em{
+	background: #43bd80;
+}
+.header_title ul:nth-of-type(3) .header_title_nav p:nth-of-type(11) em{
+	background: #1c6498;
+}
+.header_title ul:nth-of-type(3) .header_title_nav p:nth-of-type(12) em{
+	background: #7530a2;
+}
+.header_title ul:nth-of-type(3) .header_title_nav p:nth-of-type(13) em{
+	background: url(../../img/encyclopedias/radius7.png) no-repeat -4px -4px;
+}
+/*选中框颜色*/
+.header_title_nav .click{
+	border: 1px solid #2e81d1;
+	color:#2E81D1;
+}
+.header_title_nav>div{
+	position: fixed;
+	bottom: 0 ;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 80%;
+	background: rgba(50,50,50,0.4);
+}
+/*展示部分*/
+.detailed{
+	width: 100%;
+	background: #fff;
+	color:#333;
+}
+.detailed>div{
+	width: 100%;
+	padding: 0 0 10rem 0
+	background: #fff;
+}
+.detailed_title{
+	width: 97%;
+	color:#2c81d2;
+	font-size: 1rem;
+	padding: 0.8rem 0;
+	margin:  0 0 0 3%;
+	font-weight: 400;
+	font-family:"bookshelf symbol 7";
+}
+.detailed_t_img {
+	width: 100%;
+	/*display: flex;*/
+	margin:  0 0 0 7px;
+}
+.detailed_t_img div{
+	width:32%;
+	/*float: left;*/
+	display: inline-block;
+	background: #fff;
+	text-align: center;
+}
+.detailed_t_img img{
+	width: 93%;
+	height: 4.6rem;
+	
+	cursor:pointer ;
+}
+.detailed_t_img p{
+	color: #333;
+	font-size: 1rem;
+	font-weight: 400;
+	cursor:pointer ;
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+}
+
+.detailed_f_fen{
+	display: none;
+}
+
+.detailed_img {
+	width: 100%;
+	/*display: flex;*/
+	/*text-align: center;*/
+	margin:  0 0 0 7px;
+}
+.detailed_img div{
+	width:32%;
+	/*float: left;*/
+	display: inline-block;
+	background: #fff;
+	text-align: center;
+}
+.detailed_img img{
+	width: 93%;
+	height: 4.6rem;
+	cursor:pointer ;
+}
+.detailed_img p{
+	color: #333;
+	font-size: 1rem;
+	font-weight: 400;
+	cursor:pointer ;
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+}
+.bg_tis{width: 100% !important;height: 100%;position: fixed !important;top: 0 !important;left: 0 !important;z-index: 10;}
+.bg_tis div{width: 22%;padding: 0 0 10px 0;background: rgba(0,0,0,0.8);position: absolute;top:25%;left: 40%;border-radius: 8px;overflow: hidden;}
+.bg_tis div p{width: 80%;text-align:center;margin: 0.5rem auto 0 auto;color: #fff;font-size: 1.1rem; font-size: 15px;}

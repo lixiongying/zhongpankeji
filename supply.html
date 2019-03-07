@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>供应链详情（收货）</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<link href="css/part/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/part/common.css"/>
+		<link rel="stylesheet" href="./css/part/supply.css" />
+		<link rel="stylesheet" href="./css/cloak.css" />
+		
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/part/common.js"></script>
+		<script type="text/javascript" src="js/part/supply.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<script type="text/javascript" src="js/part/vue.js"></script>
+	</head>
+
+	<body>
+		<div id="myadd" v-cloak>
+		<header>
+			<div class="header" >
+				<em id="out"></em>
+				<p>供应链详情</p>
+			</div>
+		</header>
+		<main>
+			<div class= "main_top">
+				<p class="main_ordernum" @click="goex">
+					系统单号：
+					<span>{{oimaPiNo}}</span>
+					<i></i>
+				</p>
+			</div>
+			<div class="main_bottom">
+				<div class="main_link">
+					<!--<div><em><span></span></em><div><p>['+addr+']装柜发货</p><p><img src="img/about_01.jpg" alt="" /><img src="img/about_01.jpg" alt="" /><img src="img/about_01.jpg" alt="" /></p><p><span>'+json.result.oicoLoadTime+'</span></p></div><i></i></div>-->
+				</div>
+			</div>
+		</main>
+		</div>
+	</body>
+</html>

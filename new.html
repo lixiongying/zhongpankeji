@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/new.css" />
+		<link rel="stylesheet" href="css/cloak.css" />
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+		<script src="js/vue.js"></script>
+		<script src="js/page/new.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<title>石材资讯-石材信息</title>
+	</head>
+	<body>
+<div id="new" v-cloak>
+<header>
+	<a class="header-left" onclick="out()"><img src="img/return1.png"/></a>
+	<div class="header-center"><img src="img/sou.png" class="img-wei"/>
+	<input type="text" placeholder="请输入关键词"/>
+	</div>
+</header>
+
+<section>
+	<ul class="ul01">
+		<li><span class="active">石材信息</span><hr class="bor bor-block"/></li>
+		<li><span>阿米巴分享</span><hr class="bor"/></li>
+	</ul>
+	<div class="ul-bg"></div>
+	<ul class="ul02 block">
+		<li v-for="list in newList.rows" @click="go(list.AId)">
+			<a>
+			<div class="li-left"><img :src=url+list.ATitleImagePath /></div>
+			<div class="li-right">
+				<p class="p01">{{list.ATitle}}</p>
+				<p class="p02"><span>{{list.aReadTimes}}</span><span>{{list.APubdate}}</span></p>
+			</div>
+			</a>
+		</li>
+		<!--<li>
+			<a href="newdetail.html">
+			<div class="li-left"><img src="img/xin2.png"/></div>
+			<div class="li-right">
+				<p class="p01">中国石材产业链创新论坛暨石善晚宴</p>
+				<p class="p02"><span>1656</span><span>一小时前</span></p>
+			</div>
+			</a>
+		</li>
+		<li>
+			<a href="newdetail.html">
+			<div class="li-left"><img src="img/xin3.png"/></div>
+			<div class="li-right">
+				<p class="p01">第二届梧州·岑溪石材建材博览会圆满落幕</p>
+				<p class="p02"><span>1656</span><span>一小时前</span></p>
+			</div>
+			</a>
+		</li>
+		<li>
+			<a href="newdetail.html">
+			<div class="li-left"><img src="img/xin4.png"/></div>
+			<div class="li-right">
+				<p class="p01">石材机械轴承如何装配？</p>
+				<p class="p02"><span>1656</span><span>一小时前</span></p>
+			</div>
+			</a>
+		</li>
+		<li>
+			<a href="newdetail.html">
+			<div class="li-left"><img src="img/xin5.png"/></div>
+			<div class="li-right">
+				<p class="p01">石材划痕是怎么产生的？</p>
+				<p class="p02"><span>1656</span><span>一小时前</span></p>
+			</div>
+			</a>
+		</li>
+		<li>
+			<a href="newdetail.html">
+			<div class="li-left"><img src="img/xin6.png"/></div>
+			<div class="li-right">
+				<p class="p01">白色大理石的分布与形成过程解析</p>
+				<p class="p02"><span>1656</span><span>一小时前</span></p>
+			</div>
+			</a>
+		</li>-->
+	</ul>
+	<ul class="ul02">
+		<li v-for="list in newLists.rows" @click="gotos(list.AId)">
+			<a>
+			<div class="li-left"><img :src=url+list.ATitleImagePath /></div>
+			<div class="li-right">
+				<p class="p01">{{list.ATitle}}</p>
+				<p class="p02"><span>{{list.aReadTimes}}</span><span>{{list.APubdate}}</span></p>
+			</div>
+			</a>
+		</li>
+		<!--<li>
+			<a href="newde.html">
+			<div class="li-left"><img src="img/fen2.png"/></div>
+			<div class="li-right">
+				<p class="p01">先相信自己，然后别人才会相信你</p>
+				<p class="p02"><span>1656</span><span>一小时前</span></p>
+			</div>
+			</a>
+		</li>
+		<li>
+			<a href="newde.html">
+			<div class="li-left"><img src="img/fen3.png"/></div>
+			<div class="li-right">
+				<p class="p01">梦在前方，路在脚下、以勤奋的态度去劳动，总有一天会收获意想不到的成绩。</p>
+				<p class="p02"><span>1656</span><span>一小时前</span></p>
+			</div>
+			</a>
+		</li>
+		<li>
+			<a href="newde.html">
+			<div class="li-left"><img src="img/fen4.png"/></div>
+			<div class="li-right">
+				<p class="p01">门槛石怎么选？</p>
+				<p class="p02"><span>1656</span><span>一小时前</span></p>
+			</div>
+			</a>
+		</li>
+		<li>
+			<a href="newde.html">
+			<div class="li-left"><img src="img/fen5.png"/></div>
+			<div class="li-right">
+				<p class="p01">石材干挂和湿挂到底有何区别？</p>
+				<p class="p02"><span>1656</span><span>一小时前</span></p>
+			</div>
+			</a>
+		</li>
+		<li>
+			<a href="newde.html">
+			<div class="li-left"><img src="img/fen6.png"/></div>
+			<div class="li-right">
+				<p class="p01">白色大理石的分布与形成过程解析</p>
+				<p class="p02"><span>1656</span><span>一小时前</span></p>
+			</div>
+			</a>
+		</li>-->
+	</ul>
+</section>
+
+</div>
+		
+</body>
+<script>
+$(function() {
+$('.ul01 li').on('click',function(){
+	$(this).find('span').addClass('active');
+	$(this).find('hr').addClass('bor-block');
+	$(this).siblings().find('span').removeClass('active');
+	$(this).siblings().find('hr').removeClass('bor-block');
+	$('.ul02').css('display', 'none');
+	$('.ul02').eq($(this).index()).css('display', 'block');
+	})
+})
+</script>
+</html>

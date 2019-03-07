@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/goods.css" />
+		<link rel="stylesheet" href="./css/cloak.css" />
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+		<script src="js/part/vue.js"></script>
+		<script src="js/page/goods.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<title>我的清货</title>
+	</head>
+	<body>
+
+	<div id="goods" v-cloak>
+<header>
+	<a class="header-left" onclick="out()"><img src="img/return1.png"/></a>
+	<div class="header-center">我的清货</div>
+	<a @click="release" class="header-right"><img  src="img/add.png"/></a>
+</header>
+
+<section>
+	<div class="bg" v-show="show_bg == 1" @click="show_none">
+		<div>
+			<p>是否下架该商品?</p>
+			<button >否</button>
+			<button @click="init_one(out_id)">是</button>
+		</div>
+	</div>
+	<ul class="ul01">
+		<li v-for="(list,index) in qingList.mgooImage">
+			<a href="#">
+				<img :src=url+qingList.mgooImage[index] class="img02"/>
+				<p class="p01">{{qingList.mgooClearExplain[index]}}</p>
+				<p class="p02"><span>厚度：</span><span>{{qingList.mgooMaxThickness[index]}}-{{qingList.mgooMinThickness[index]}}cm</span></p>
+				<p class="p03"><span>清货价：</span><span>{{qingList.mgooMaximumPrice[index]}}-{{qingList.mgooMinimumPrice[index]}}</span></p>
+				<div class="mydiv">					
+					<a>
+						<div class="div-right" @click="edit(qingList.mgooId[index])"><img src="img/bian.png" class="img03"/><span>编辑</span></div>						
+					</a>
+					<div class="div-left" @click="out_show(qingList[index])"><img src="img/del.png" class="img01"/><span>下架</span></div>
+				</div>
+			</a>
+		</li>
+		<!--<li>
+			<a href="#">
+				<img src="img/index-qing2.png" class="img02"/>
+				<p class="p01">大量路基石</p>
+				<p class="p02"><span>厚度：</span><span>2.21-2.24cm</span></p>
+				<p class="p03"><span>清货价：</span><span>￥323-380㎡</span></p>
+				<div class="mydiv">
+					<a href="publish.html">
+						<div class="div-right"><img src="img/bian.png" class="img03"/><spapn>编辑</spapn></div>
+					</a>
+					<div class="div-left"><img src="img/del.png" class="img01"/><span>下架</span></div>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<img src="img/index-qing3.png" class="img02"/>
+				<p class="p01">黑灰石边料</p>
+				<p class="p02"><span>厚度：</span><span>2.21-2.24cm</span></p>
+				<p class="p03"><span>清货价：</span><span>￥323-380㎡</span></p>
+				<div class="mydiv">
+					<a href="publish.html">
+						<div class="div-right"><img src="img/bian.png" class="img03"/><spapn>编辑</spapn></div>
+					</a>
+					<div class="div-left"><img src="img/del.png" class="img01"/><span>下架</span></div>					
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<img src="img/index-qing4.png" class="img02"/>
+				<p class="p01">各种石材边料，大量路基石</p>
+				<p class="p02"><span>厚度：</span><span>2.21-2.24cm</span></p>
+				<p class="p03"><span>清货价：</span><span>￥323-380㎡</span></p>
+				<div class="mydiv">
+					<a href="publish.html">
+						<div class="div-right"><img src="img/bian.png" class="img03"/><spapn>编辑</spapn></div>
+					</a>
+					<div class="div-left"><img src="img/del.png" class="img01"/><span>下架</span></div>
+				</div>
+			</a>
+		</li>-->
+	</ul>
+</section>
+
+</div>
+	</body>
+</html>

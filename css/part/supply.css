@@ -1,0 +1,112 @@
+.main_top{
+	width: 100%;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	background: #FFF;
+	padding : 0 0 0 5%;
+	margin:  0 0 0.4rem 0;
+}
+.main_ordernum{
+	color:#323232 ;
+	font-size: 1.1rem;
+	font-weight: 400;
+	position: relative;
+}
+.main_ordernum i{
+	display: inline-block;
+	width: 1.5rem;
+	height: 2.5rem;
+	background: url('../../img/completed/go.png')no-repeat;
+	background-size: 100%;
+	position: absolute; 
+	top:1rem;
+	right: 0.5rem;
+}
+
+
+.main_bottom{
+	background: #fff;
+}
+.main_link>div{
+	width: 86%;
+	height: 6.5rem;
+	margin: 0 0 0 14%;
+	position: relative;
+	border-bottom: 1px solid #f8f8f8;
+}
+.main_link>div em{
+	display: inline-block;
+	width: 1.4rem;
+	height: 6.5rem;
+	border-left:1px solid #ccc;
+	position: absolute;
+	left:-1.8rem;
+}
+.main_link>div img{
+	width: 2rem;
+	height: 2rem;
+	margin:  0 0.2rem;
+}
+.main_link>div:nth-last-of-type(1) em{
+	display: inline-block;
+	width: 1.4rem;
+	height: 2.5rem;
+	border-left:1px solid #ccc;
+	position: absolute;
+	left:-1.8rem;
+}
+.main_link>div em span{
+	display:block;
+	position:absolute;
+	top:35px;
+	left:-9px;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #ccc;
+}
+.main_link>div:nth-of-type(1) em span{
+	background: #0062CC;
+}
+
+
+.main_link>div div p{
+	margin: 0;
+}
+
+.main_link>div div p:nth-of-type(1){
+	color: #323232;
+	font-size: 1.05rem;
+	padding:  1rem 0 0 0;
+	margin:  0 0 5px 0;
+}
+.main_link>div div p:nth-of-type(2){
+	width: 85%;
+	height: 2.4rem;
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	margin:  0 0 0px 0;
+}
+.main_link>div div p:nth-of-type(3){
+	color: #ccc;
+}
+.main_link>div i{
+	display: inline-block;
+	width: 1.5rem;
+	height: 2.5rem;
+	background: url('../../img/supply/go.png')no-repeat;
+	background-size: 100%;
+	position: absolute; 
+	top:2.3rem;
+	right: 0.5rem;
+}
+.main_link>div:nth-of-type(1) em span a{
+	display: block;
+	color: #fff;
+	font-size: 0.7rem;
+	position: relative;
+	left:2px;
+	top:-3px;
+}

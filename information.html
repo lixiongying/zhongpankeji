@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>个人信息</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<link href="css/part/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/part/common.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/part/information.css"/>
+		<link rel="stylesheet" href="./css/cloak.css" />
+		<link rel="stylesheet" type="text/css" href="css/imageviewer.css"/>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/part/information.js"></script>		
+		<!--<script type="text/javascript" src="js/ajaxfileupload.js"></script>-->
+		<!--<script type="text/javascript" src="js/WdatePicker.js"></script>-->
+		<script type="text/JavaScript" src="http://pv.sohu.com/cityjson?ie=utf-8" charset="gb2312"></script>
+		<script type="text/javascript" src="js/part/vue.js"></script>
+		<script src="js/uploadImg.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/part/mui.min.js"></script>
+		 <script src="js/mui.previewimage.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.zoom.js" type="text/javascript" charset="utf-8"></script>
+	   <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		
+	</head>
+	<body>
+	<div id="myadd" v-cloak>
+		<header>
+			<div class="header">
+				<em id="out" onclick="out()"></em>
+				<p>个人信息</p>
+			</div>
+		</header>
+		<div class="bg_tis" v-show="err == 1">
+			<div>
+				<p>错误！请重试!</p>
+			</div>
+		</div>
+		<main>
+			<form  id="form1">
+				<div class="main_all">
+					<div class="top">
+						<p>头<span></span>像</p>
+						<!--<p>
+							<img id="iimg" v-show="img_show == 0" class="tophead" src="./img/information/portrait.png" />
+							<img id="iimg" v-show="img_show == 1" class="tophead" :src="museImage"  />
+							<input class="up_img" type="file" name="logoFile" id="logoFile" onchange="setImg(this);">
+						</p>-->
+						<!--src="./img/information/portrait.png"--> 
+						<div onclick="changehead(this)" class="head_pic header_img mui-pull-right" id="bg_fx">
+							<img :src="museImage" style="width:100%;height:100%;border-radius:50% ;"  id="userPhoto"/>
+						</div>
+						<input type="hidden" id="ckjl.id" name="ckjl.id" value="430">
+					</div>
+					<div>
+						<p>姓<span></span>名</p>
+						<p><input type="" name="" id="" placeholder="请输入姓名"  v-model="name"/></p>
+					</div>
+					<div class="sex">
+						<p>性<span></span>别</p>
+						<p @click="sex_show"><input type="text" readonly="readonly" name="" id="" placeholder="请选择性别" v-model="sexx" /></p>
+						<em @click="sex_show"></em>
+					</div>
+					<div>
+						<p>联系电话</p>
+						<p><input type="number" name="" id="" placeholder="请输入电话号码" v-model="museMobilePhone" /></p>
+					</div>
+					<div>
+						<p>联系手机</p>
+						<p><input type="number" name="" id="" placeholder="请输入手机号码" v-model="Phone" /></p>
+					</div>
+					<div>
+						<p>公司名称</p>
+						<p><input type="" name="" id="" placeholder="请输入公司名称" v-model="company" /></p>
+					</div>
+					<div class="type">
+						<p>用户类型</p>
+						<p @click="type_show"><input type="" name="" id=""  disabled="disabled" placeholder="请选择用户类型" v-model="type" /></p>
+						<em @click="type_show"></em>
+					</div>
+					<div class="position">
+						<p>所在地区</p>
+						<p><input type="" name="" id="" placeholder="省份/城市" v-model="city" /></p>
+						<em ></em>
+					</div>
+					<div>
+						<p>公司地址</p>
+						<p><input type="" name="" id="" placeholder="请输入详细地址" v-model="address" /></p>
+					</div>
+					<div class="upload" v-show="museType==2">
+						<p>上传图片</p>					
+						<div id='F_CKJLBS' class="upload_box row image-list">
+							<div class="fxfbi_image clear"> 
+								<!--<div class="imgs">
+									<img class="picBig" src="img/business/product4.png"/>
+									<span class="del_icon"><img src="img/information/shangpinxiangqing_quxiao.png" alt="" /></span>
+								</div>-->
+									<div id="F_CKJLB" class="active image-item"  onclick="showActionSheet(this);">
+									<img src="./img/information/upload.png" alt=""  class="add_img"//>	
+								</div>
+					
+								<div class="clearB">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="preservation_big">
+						<div class="preservation" @click="updata">保存/认证</div>
+					</div>
+				</div>
+			</form>
+		</main>
+		<div class="type_list" @click="type_bottom">
+			<div class="type_list_top" v-show="type_c_show==1">
+				<div v-for="(x,index) in type_arr" @click="type_c(index)">
+					<p>{{x}}</p>
+				</div>
+			</div>
+			<div class="type_list_top" v-show="sex_c_show==1">
+				<div @click="sex_c(0)">
+					<p>女</p>
+				</div>
+				<div @click="sex_c(1)">
+					<p>男</p>
+				</div>
+			</div>
+			<div class="type_list_bottom">
+				<div @click="type_bottom">
+					<p>取消</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		mui.previewImage();	
+	</script>
+	</body>
+
+</html>

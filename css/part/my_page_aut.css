@@ -1,0 +1,248 @@
+header{
+	width: 100%;
+}
+.header_bg{
+	width: 100%;
+	height: 13rem;
+	background-image: url('../../img/my_page/purge3.png');
+	background-size: 100%;
+}
+.header_top{
+	position: absolute;
+	top:5%;
+	left: 6%;
+}
+.header_top>div{
+	float: left;
+}
+.header_left{
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	background: rgba(255,255,255,0.4);
+}
+.header_left img{
+	width: 85%;
+	height: 85%;
+	margin: 0 auto;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+	top:7.5%;
+	left: 7.5%;
+}
+.header_right{
+	height: 5rem;
+	padding:  0 0 0 1rem;
+}
+.header_right>p{
+	height: 2.5rem;
+	line-height: 3rem;
+	color: #fff;
+	font-size: 1.2rem;
+}
+.header_right>p>a{
+	color: #fff;
+}
+.header_right>p:nth-of-type(2){
+	width: 100%;
+	position: relative;
+	top: -0.8rem;
+	left: 0;
+	display: none;/*-------------------------未认证标志开关----------------*/
+	/*height: 2rem;*/
+}
+.header_right div{
+	/*display: none;/*-----------------------公司、电话开关------------------*/*/
+}
+
+.header_right img{
+	width: 60%;
+	height: 60%;
+}
+@-moz-document url-prefix() { .header_right img { 
+		width: 100%;
+	} } 
+
+.header_right div>p{
+	color: #989898;
+	font-size: 1.1rem;
+}
+.header_right div>p:nth-of-type(2){
+	position: relative;
+	top: -0.5rem;
+}
+.header_right p em{
+	display: inline-block;
+	width: 1rem;
+	height: 1.2rem;
+	background: url('../../img/my_page/enterprise.png') no-repeat;
+	background-size: 100%;
+	position: relative;
+	top: 0.2rem;
+	margin:  0 0.5rem;
+	/*display: none;/*----------------------认证标志开关-----------------*/*/
+}
+
+
+main{
+	background: #f8f8f8;
+	padding:  0 0 4.5rem 0;
+}
+main>div{
+	border-top: 1px solid #eae5e5;
+	/*border-bottom: 1px solid #eae5e5;*/
+	box-shadow:   0px 0px 4px -2px rgba(0,0,0,0.1);
+	margin:  0 0 0.2rem 0;
+	background: #fff;
+}
+main>div:nth-of-type(1){
+	border-top: none;
+}
+main>div>div{
+	width: 100%;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	border-bottom: 1px solid #eae5e5;
+}
+main>div>div>em{
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	position: relative;
+	top:0.6rem;
+	left: 1rem;
+}
+.order{
+	width: 100%;
+	height: 7rem;
+	background: #f8f8f8;
+	border: none;
+	position: relative;
+	/*display: none;   /*--------------------------进出口开关---------------------------*/*/
+	/*border: 1px solid #e5e5e5;*/
+}
+.order_son{
+	width: 94%;
+	height: 10rem;
+	position: absolute;
+	background: #fff;
+	top: -3.2rem;
+	left: 3%;
+	/*border: 1px solid #989898;*/
+	border-radius: 0.5rem;
+	box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.5)}
+.order_son>div{
+	height: 5rem;
+	text-align: center;
+	
+}
+.order_son>div:nth-of-type(1){
+	height: 5rem;
+	border-bottom: 1px solid #989898;
+}
+.order_top>div{
+	float: left;
+}
+.order_left{
+	width: 25%;
+	height: 5rem;
+	line-height: 2.5rem;
+}
+.order_left>div{
+	height: 70%;
+	width: 70%;
+	margin:0.8rem 20% 15% 10%;
+	border-right: 1px solid #989898;
+}
+.order_left img{
+	width: 1.8rem;
+	position: relative;
+	/*top: 0.6rem;*/
+	
+}
+.order_left em{
+	width: 100%;
+	display: block;
+	line-height: 0rem;
+	font-size: 0.9rem;
+}
+.order_right{
+	width: 75%;
+	display: flex;
+}
+.order_right>div{
+	width: 33.33%;
+	height: 5rem;
+	line-height: 2.5rem;
+}
+.order_right p{
+	margin: 0;
+	padding: 0;
+}
+.order_right>div>p:nth-of-type(1){
+	font-size: 1rem;
+}
+.order_right>div>p:nth-of-type(2){
+	font-size: 1.6rem;
+	color:#2c81d2 ;
+	line-height: 1rem;
+}
+
+
+.main_AF div:nth-of-type(1) em{
+	background:url('../../img/my_page/information.png') no-repeat;
+	background-size: 95%;
+}
+.main_AF div:nth-of-type(2) em{
+	background:url('../../img/my_page/star.png') no-repeat;
+	background-size: 90%;
+}
+.main_BF div:nth-of-type(1) em{
+	background:url('../../img/my_page/product.png') no-repeat ;
+	background-size: 80%;
+}
+.main_BF div:nth-of-type(2) em{
+	background:url('../../img/my_page/yes.png') no-repeat;
+	background-size: 80%;
+}
+.main_CF div:nth-of-type(1) em{
+	background:url('../../img/my_page/home.png') no-repeat ;
+	background-size: 90%;
+}
+.main_CF div:nth-of-type(2) em{
+	background:url('../../img/my_page/aircraft.png') no-repeat ;
+	background-size: 80%;
+}
+.main_CF div:nth-of-type(3) em{
+	background:url('../../img/my_page/set.png') no-repeat;
+	background-size: 85%;
+}
+main>div span {
+	font-size: 1.1rem;
+	margin:  0 0 0 1.5rem ;
+}
+main>div i{
+	display: inline-block;
+	width: 1.5rem;
+	height: 2rem;
+	float: right;
+	margin:  0 1rem 0 0;
+	background: url('../../img/my_page/go.png') no-repeat;
+	background-size: 120%;
+	position: relative;
+	top:1rem;
+}
+
+.footer{position: fixed;bottom: 0; left: 0; width: 100%; background: #fff; border-top:1px solid #eee;}
+.footer-ul{ display: flex;  width: 100%; justify-content: center;  padding: 10px 0 8px 0;}
+.footer-ul li{ flex: 1; text-align: center;}
+.footer-ul li p{ line-height: 15px; margin: 0;}
+.fot-img{ width: 25px; height: 25px; position: relative;bottom: 4px;}
+
+
+
+
+
+
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/product.css" />
+		<link rel="stylesheet" href="css/cloak.css" />
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+		<script src="js/vue.js"></script>
+		<script src="js/page/product.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<title>我的产品</title>
+	</head>
+	<body>
+<div id="product" v-cloak>
+<header>
+	<a class="header-left" onclick="out()"><img src="img/return1.png"/></a>
+	<div class="header-center">我的产品</div>
+	<a class="header-right"><img src="img/add.png"/></a>
+</header>
+<div class="bg" v-show="show_bg == 1" @click="show_none">
+	<div>
+		<p>是否下架该商品?</p>
+		<button >否</button>
+		<button @click="init_three(out_id)">是</button>
+	</div>
+</div>
+<section>
+	<ul class="ul01">
+		<li v-for="product in proList.list">
+			<a href="#">
+				<img :src=url+product.mgooImage class="img02"/>
+				<p class="p01">{{product.mgooName}}</p>
+				<div class="mydiv">
+					<div class="div-left" @click="out_show(product.mgooId)"><img src="img/trash.png" class="img01"/><span>下架</span></div>
+					<a @click="publish(product.mgooId)">
+						<div class="div-right"><img src="img/zai.png" class="img01"/><span>清售</span></div>
+					</a>
+				</div>
+			</a>
+		</li>
+		<!--<li>
+			<a href="#">
+				<img src="img/prod2.jpg" class="img02"/>
+				<p class="p01">花岗石-黑晶玉</p>
+				<div class="mydiv">
+					<div class="div-left"><img src="img/del.png" class="img01"/><span>下架</span></div>
+					<a href="publish.html">
+						<div class="div-right"><img src="img/zai.png" class="img01"/><span>清货</span></div>
+					</a>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+			<img src="img/prod3.jpg" class="img02"/>
+			<p class="p01">大理石-雪花白</p>
+			<div class="mydiv">
+				<div class="div-left"><img src="img/del.png" class="img01"/><span>下架</span></div>
+				<a href="publish.html">
+					<div class="div-right"><img src="img/zai.png" class="img01"/><span>清货</span></div>
+				</a>
+			</div>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<img src="img/prod4.jpg" class="img02"/>
+				<p class="p01">大理石-挪威红</p>
+				<div class="mydiv">
+					<div class="div-left"><img src="img/del.png" class="img01"/><span>下架</span></div>
+					<a href="publish.html">
+						<div class="div-right"><img src="img/zai.png" class="img01"/><span>清货</span></div>
+					</a>
+				</div>
+			</a>
+		</li>-->
+	</ul>
+</section>
+
+</div>
+	</body>
+</html>

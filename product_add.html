@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/product_add.css" />
+		<link rel="stylesheet" href="css/cloak.css" />
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+		<script type="text/javascript" src="js/page/product_add.js" ></script>
+		<script src="js/part/vue.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<title>发布清货信息</title>
+	</head>
+	<body>
+<div id="myadd" v-cloak>
+<header>
+	<a class="left" @click="out"><img src="img/return1.png"/></a>
+	<p class="center">发布产品信息</p>
+</header>
+<div class="bg_tis" v-show="err == 1">
+	<div>
+		<p>无信息!</p>
+	</div>
+</div>
+<section>
+	<form>
+		<ul class="ul01">
+			<li @click="fen"><span class="span-font">关联石材</span><a class="href-a"><span v-show="other ==0">{{name}}</span><em v-show="show_fen == 0" class="href-em1"></em><em v-show="show_fen == 1" class="href-em2"></em></a></li>
+			<li class="fen" v-show="show_fen == 1">
+				<div v-for="(x,index) in tetter_All" v-show="tetter_All[index].length != 0">
+					<p class="fen_tet">{{tetter[index]}}</p>
+					<p v-for="(k) in tetter_All[index]"  class="p-font" @click="cha(k.id,k.name)">{{k.name}}</p>
+				</div>
+				<div >
+					<p class="fen_tet">其他</p>
+					<p class="p-font" @click="cha(-1)">其他</p>
+				</div>
+			</li>
+			<li class="bg" @click="bg" v-show="show_fen == 1"></li>
+			<li class="li02" v-show="other !=0">
+				<span class="sp-left">石材名称：</span>
+				<input type="text"  v-model="name" class="input1"/ >
+			</li>
+			<li class="li02" @click="type_show" v-show="other !=0">
+				<span class="sp-left" >底色：</span>
+				<input type="text" v-model="color" readonly="readonly"  class="input1"/>
+				<em></em>
+			</li>
+			<li class="li04" v-show="other !=0">
+				<span class="sp-left">产品介绍：</span>
+				<p><textarea tyle="OVERFLOW: hidden" placeholder="请输入产品介绍" class="input1"/></textarea></p>
+			</li>
+			<li class="li04" v-show="other !=0">
+				<span class="sp-left">上传图片：</span>
+				<img src="./img/information/upload.png" alt="" />
+			</li>
+			<li class="li05">
+				<p @click="init_two">发 布</p>
+			</li>
+		</ul>		
+	</form>	
+</section>
+<div class="type_list" @click="type_bottom">
+	<div class="type_list_top" v-show="type_c_show==1">
+		<div v-for="(x,index) in color_All" @click="type_c(index)">
+			<p>{{x}}</p>
+		</div>
+	</div>
+	<div class="type_list_bottom">
+		<div @click="type_bottom">
+			<p>取消</p>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>

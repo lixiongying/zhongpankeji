@@ -1,0 +1,98 @@
+/*主要内容*/
+[v-cloak]{
+        display:none !important;
+    }
+nav{height:220px;
+ display: flex; flex-wrap: wrap;}
+ nav>img{ width: 100%;}
+nav a{ margin-top: 20px; position: absolute;}
+ nav a.return{ width: 65%; left:20px;}
+ nav a.fen{ width: 15%; right: 55px;}
+ nav a.zang{ width: 15%;right: 0px;}
+ nav a img{ width:40.5px;height: 40.5px;}
+.ul01{ margin: 8px 20px;}
+.ul01 li:nth-child(1){ font-size: 18px; color: #484848;}
+.ul01 li:nth-child(2){ font-size: 13px; color: #666;}
+.bg{ height: 10px; background-color: #f2f2f2;}
+.ul02,.ul03,.ul04{ margin: 8px 20px;}
+.ul02 li,.ul03 li,.ul04 li{ font-size: 14px;}
+.ul02 li span,.ul03 li span,.ul04 li span{ color: #666;}
+.flex-li{ display: flex; flex-wrap: wrap;}
+.li-left{ width: 22%; color: #666;}
+.li-right{ width: 70%;}
+.li-right img{ width: 60px; height: 60px; margin-right: 10px;}
+.p01{ font-size: 14px; color: #666; display: flex; justify-content: flex-start; 
+background-color: #f2f2f2; padding:8px 0 8px 20px;}
+.p01 span{ padding-left: 10px;}
+.p01 img{ width: 3px;height: 18px;position: relative;top: 5px;}
+.ul05{ margin: 5px 20px 20px 20px;}
+.ul05 li{ display: flex; flex-wrap: wrap; border-bottom: 1px solid #eee; padding: 12px 0 5px 0;}
+.ul05 img{width: 100%;height: 4.7rem;}
+.ul05 li:nth-child(3){ border-bottom: none;}
+.ul06{margin: 5px 20px 5px 20px;width:90%;height: 7.5rem ;overflow-y: hidden;overflow-x: scroll;}
+.ul06 div{width:70rem;height: 7.5rem ;padding:  0.5rem 0 0 0;}
+.ul06 li{width: 7rem;height: 7.5rem; float: left;text-align: center;margin:  0 10px 0 0;}
+.ul06 img{width: 100%;height:5rem;border-radius: 4px;}
+.div-left{ width: 32%;}
+.div-right{ width: 65%; margin:  0 0 0 3%;}
+.ri-p01{height: 1.1rem;line-height: 1.1rem; font-size: 15px; color: #323232;}
+.ri-p02{ font-size: 13px; color: #929292;}
+.li-span{ display: flex; flex-wrap: wrap;}
+.span-left{ width: 14%; color: #666;}
+.span-right{ width: 86%;}
+.span-le{ width: 31%; color: #666;}
+.span-ri{ width: 69%;}
+.sp-left{ width: 22%; color: #666;}
+.sp-right{ width: 78%;}
+.sp-le{ width: 22%; color: #666;}
+.sp-ri{ width: 78%;}
+
+/*分享插件样式*/
+#share_box{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #fff;
+	width: 100%;
+	height: 7rem !important;
+	z-index: 2;
+	display: none;
+}
+.share_bg{
+	width:30rem ;
+	height: 50rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 1;
+	display: none;
+	
+}
+.layui-m-layercont{
+	height: 5rem  !important;
+	line-height 5rem  !important;
+}
+.social-share{
+	margin:2.5rem 0 0 0 !important;
+}
+.social-share-icon{
+	width: 3rem !important;
+	height: 3rem !important;
+	margin:  0 0.5rem !important;
+}
+.social-share-icon::before{
+	font-size: 2rem;
+	position: relative;
+	top: 0.5rem;
+}
+.Mall{
+	position: relative;
+	top: -10px;
+	margin:  0 0.2rem;
+}
+.bg_tis{width: 100% !important;height: 100%;position: fixed !important;top: 0 !important;left: 0 !important;z-index: 10;}
+.bg_tis div{width: 22%;padding: 0 0 10px 0;background: rgba(0,0,0,0.8);position: absolute;top:25%;left: 40%;border-radius: 8px;overflow: hidden;}
+.bg_tis div p{width: 80%;text-align:center;margin: 0.5rem auto 0 auto;color: #fff;font-size: 1.1rem; font-size: 15px;}
+.img_look{position: fixed;top: 0;left: 0;background: rgba(0,0,0,0.7);width: 100%;height: 100%;z-index:100;}
+.img_look img{position: absolute;top: 30%;left: 0;width: 100%;height: auto;}

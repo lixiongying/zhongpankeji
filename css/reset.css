@@ -1,0 +1,28 @@
+/*头部*/
+header{ background-color: #373737; height: 60px; display: flex; justify-content: flex-start; line-height: 60px;}
+header a{ width: 20%;}
+.left img{ margin-top: 5px;}
+.center{ font-size: 18px; color: #fff; width: 60%; text-align: center;}
+
+
+/*主要内容*/
+body{ background-color: #f3f3f3;}
+.myinput{ display: flex; flex-wrap: wrap; margin: 20px 20px 40px 20px; border: 1px solid #eee; border-radius: 10px;
+overflow: hidden;}
+input{ width: 100%; line-height: 50px; border: none; border-bottom: 1px solid #eee;}
+.myinput input:last-child{ border-bottom: none;}
+.myinput input{ padding-left: 20px; font-size: 16px; color: #797979;}
+.sub{ background-color: #0095dd; color: #fff; font-size: 20px; border-bottom: none; margin: 0 20px;
+ border-radius: 10px; width: 89%;}
+.myinput input::-webkit-input-placeholder ,textarea::-webkit-input-placeholder{ 
+  color: #797979;
+  font-size: 16px;
+}
+.yan{ display: flex; flex-wrap: wrap; width: 100%; align-items: center; background-color: #fff; 
+border-bottom: 1px solid #eee;}
+.yan input{ width: 55%; border-bottom: none; border-right: 1px solid #eee; font-size: 18px;}
+.yan span{ width: 35%; text-align: center; color: #74bee2; font-size: 15px;}
+.yan input::-webkit-input-placeholder{ font-size: 18px;}
+.bg_tis{width: 100% !important;height: 100%;position: fixed !important;top: 0 !important;left: 0 !important;z-index: 10;}
+.bg_tis div{width: 22%;padding: 0 0 10px 0;background: rgba(0,0,0,0.8);position: absolute;top:25%;left: 40%;border-radius: 8px;overflow: hidden;}
+.bg_tis div p{width: 80%;text-align:center;margin: 0.5rem auto 0 auto;color: #fff;font-size: 1.1rem; font-size: 15px;}

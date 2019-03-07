@@ -1,0 +1,135 @@
+.header_top{
+	width: 100%;
+	height: 3.5rem;
+	background: #373737;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 4;
+}
+.header_top_sou{
+	width: 90%;
+	height: 2.5rem;
+	line-height: 3rem;
+	margin: 0 auto 0 auto ;
+	background: #f4f4f4;
+	border-radius: 0.4rem;
+	position: relative;
+	top: 0.5rem;
+	z-index: 99;
+	
+}
+.header_top_sou div i{
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	position: absolute;
+	top: 0.5rem;
+	left: 0.7rem;
+	background: url('../../img/encyclopedias/sou.png') no-repeat;
+	background-size: 90%;
+}
+.header_top_sou div input{
+	/*color: #f8f8f8;*/
+	font-size: 1.1rem;
+	color: #999;
+	margin:  0 0 0 3rem;
+	background: #f4f4f4;
+	border: none;
+}
+
+
+.top{
+	width: 3rem;
+	height: 3rem;
+	background: rgba(100,100,100,0.4);
+	border-radius: 50%;
+	position: fixed;
+	bottom: 6rem;
+	right: 1.5rem;
+}
+.top img{
+	width: 65%;
+	height: 65%;
+	position: relative;
+	top: 0.5rem;
+	left: 0.5rem;
+	opacity: 0.5;
+}
+
+main{
+	margin:  3.5rem 0 4.7rem 0;
+	
+}
+main .main:nth-of-type(1){
+	border-top:none;
+}
+.main{
+	padding:  1rem 0 0.8rem 0;
+	background: #fff;
+	/*border-top: 0.5rem solid #f8f8f8;*/
+	box-shadow:   0px 2px 14px -9px rgba(0,0,0,1);
+	margin:  0 0 0.5rem 0;
+}
+
+.main_top>div{
+	width: 100%;
+	float: left;
+	padding:  0 0 0.5rem 0.5rem;
+}
+.main_top .main_top_left{
+	width: 30%;
+	padding:  0 0 0 5%;
+	/*background: #ccc;*/
+}
+.main_top .main_top_left img{
+	width: 100%;
+	height: 100%;
+}
+.main_top .main_top_right{
+	width: 70%;
+	/*background: #ccc;*/
+}
+.main_top .main_top_right p{
+	height: 1rem;
+	line-height: 1rem;
+	font-weight: 400;
+}
+.main_top .main_top_right p:nth-of-type(1){
+	font-size: 1.1rem;
+	color: #323232;
+}
+.main_top .main_top_right p:nth-of-type(2){
+	position: relative;
+	top: 5px;
+}
+.main_bottom>div{
+	width: 100%;
+	padding:  0 0 0 5%;
+}
+.main_bottom_top{
+	padding:  0 0 0 5%;
+}
+.main_bottom_top p{
+	color: #323232;
+	font-weight: 400;
+	font-size: 0.95rem;
+	width: 90%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.main_bottom_bottom{
+	width: 100%;
+}
+.main_bottom_bottom img{
+	width: 30%;
+	height:5.5rem;
+	margin:  0 0.3rem 0 0 ;
+}
+
+.footer{position: fixed;bottom: 0; left: 0; width: 100%; background: #fff; border-top:1px solid #eee;}
+.footer-ul{ display: flex;  width: 100%; justify-content: center;  padding: 10px 0 8px 0;}
+.footer-ul li{ flex: 1; text-align: center;}
+.footer-ul li p{ line-height: 15px; margin: 0;}
+.fot-img{ width: 25px; height: 25px; position: relative;bottom: 4px;}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/reset.css" />
+		<script src="js/part/mui.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/part/vue.js"></script>
+		<script type="text/javascript" src="js/page/reset.js"></script>
+		<title>修改密码</title>
+	</head>
+	<body>
+<header>
+	<a class="left" onclick="out()"><img src="img/return.png"/></a>
+	<p class="center">修改密码</p>
+</header>
+<section id="myadd">
+	<form class="myform">
+		<div class="myinput">
+		<input type="number" placeholder="请输入手机号" v-model="phone"/>
+		<div class="yan"><input type="number" placeholder="请输入验证码" v-model="code"/><span @click="init_one">发送验证码</span></div>
+		<input type="password" placeholder="请设置最少6位密码" v-model="newPwd"/>
+		<input type="password" placeholder="请再次输入密码" v-model="newPwd_"/>
+		</div>
+		<input type="button" @click="init_two" value="确认"  class="sub"/>
+	</form>
+	<div class="bg_tis" v-show="err == 1">
+		<div>
+			<p>无清货信息!</p>
+		</div>
+	</div>
+</section>
+	</body>
+</html>

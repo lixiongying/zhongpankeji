@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/part/mui.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<title></title>
+	</head>
+	<body>
+<p >321321</p>
+<a href="javascript:" onclick="shoucang(document.title,window.location);">加入收藏</a>
+<script>
+// 加入收藏 兼容360和IE6
+function shoucang(sTitle,sURL) {
+    try
+    {
+        window.external.addFavorite(sURL, sTitle);
+    }
+    catch (e)
+    {
+        try
+        {
+            window.sidebar.addPanel(sTitle, sURL, "");
+}
+catch (e)
+{
+    alert("加入收藏失败，请使用Ctrl+D进行添加");
+        }
+    }
+}	
+</script>
+	</body>
+</html>

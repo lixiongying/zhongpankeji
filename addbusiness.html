@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>新增企业</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+		<link href="css/part/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/part/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/parter/addbusiness.css"/>
+		<link rel="stylesheet" href="./css/cloak.css" />
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/part/common.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/part/mui.min.js"></script>
+		<script type="text/javascript" src="js/part/vue.js"></script>
+		<script type="text/javascript">
+			
+		</script>
+	</head>
+
+	<body>
+		<div id="myadd">
+			<header>
+				<div class="header">
+					<em id="out" onclick="out()"></em>
+					<p>新增企业</p>
+				</div>
+			</header>
+			<!--<div class="bg_tis" v-show="err == 1">
+				<div>
+					<p>错误！请重试!</p>
+				</div>
+			</div>-->
+			<main>
+				<form id="form1">
+					<div class="main_all">		
+						<div>
+							<p>名称</p>
+							<p><input type="" name="" id="" placeholder="请输入企业名称" v-model="name" /></p>
+						</div>
+						<div>
+							<p>联系电话</p>
+							<p><input type="number" name="" id="" placeholder="请输入电话号码" v-model="museMobilePhone" /></p>
+						</div>
+						<div class="position">
+							<p>地<span></span>址</p>							
+							<p><input type="" name="" id="" placeholder="请输入企业地址" v-model="city" /></p>
+							<em></em>
+						</div>
+						<div class="type box_li">
+							<p>企业类型</p>
+							<p @click="type_show"><input type="" name="" readonly="readonly" id="" placeholder="请选择" v-model="type" /></p>
+							<em></em>
+						</div>
+						<div class="sex type box_li">
+							<p>是否认证</p>
+							<p @click="sex_show"><input type="text" readonly="readonly" name="" id="" placeholder="请选择" v-model="sexx" /></p>
+							<em></em>
+						</div>
+						<div class="sex type box_li">
+							<p>合作客户</p>
+							<p @click="sex_show"><input type="text" readonly="readonly" name="" id="" placeholder="请选择" v-model="sexx" /></p>
+							<em></em>
+						</div>
+						<div class="sex type box_li">
+							<p>推<span></span>荐</p>
+							<p @click="sex_show"><input type="text" readonly="readonly" name="" id="" placeholder="请选择" v-model="sexx" /></p>
+							<em></em>
+						</div>
+						<div class="upload">
+							<p>店铺LOGO</p>
+							<div class="upload_box">
+								<div id="jia">
+									<img src="./img/information/upload.png" alt="" />
+								</div>
+							</div>
+						</div>
+						<div class="upload">
+							<p>店铺图片</p>
+							<div class="upload_box">
+								<div id="jia">
+									<img src="./img/information/upload.png" alt="" />
+								</div>
+							</div>
+						</div>
+						<div class="sex type box_li">
+							<p>主营产品</p>
+							<!--<p @click="sex_show"><input type="text" readonly="readonly" name="" id="" placeholder="请选择性别" v-model="sexx" /></p>-->
+							<em @click="sex_show"></em>
+						</div>
+						<div class="preservation_big" style="margin-top: 20px;">
+							<div class="preservation" @click="updata">新增</div>
+						</div>
+					</div>
+				</form>
+			</main>
+			<!--<div class="type_list" @click="type_bottom">
+				<div class="type_list_top" v-show="type_c_show==1">
+					<div v-for="(x,index) in type_arr" @click="type_c(index)">
+						<p>{{x}}</p>
+					</div>
+				</div>
+				<div class="type_list_top" v-show="sex_c_show==1">
+					<div @click="sex_c(0)">
+						<p>女</p>
+					</div>
+					<div @click="sex_c(1)">
+						<p>男</p>
+					</div>
+				</div>
+				<div class="type_list_bottom">
+					<div @click="type_bottom">
+						<p>取消</p>
+					</div>
+				</div>
+			</div>-->
+		</div>
+	</body>
+	<script>
+	</script>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/telelogin.css" />
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/part/vue.js"></script>
+		<script type="text/javascript" src="js/page/telelogin.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<title>手机号快捷登录</title>
+	</head>
+
+	<body>
+		<div id="myadd">
+			<header>
+				<a class="left" onclick="out()"><img src="img/login_x.png" /></a>
+			</header>
+			<div class="bg_tis" v-show="err == 1">
+				<div>
+					<p>错误！请重试!</p>
+				</div>
+			</div>
+			<section>
+				<form>
+					<ul class="ul01">
+						<li class="li01">
+							<a class="click">手机登录</a><span>丨</span>
+							<a onclick="psdLogin()">密码登录</a>
+						</li>
+						<li class="li02">
+							<div class="div-right"><input type="number" placeholder="手机号" v-model="Phone" /></div>
+						</li>
+						<li class="li02">
+							<div class="div-right">
+								<input type="number" maxlength="6" placeholder="验证码" v-model="code" />
+								<span class="chack" v-show="chack_show == 1" @click="init_one">获取验证码</span>
+								<span id="chack" v-show="chack_show == 0" class="chack">{{content}}</span>
+							</div>
+						</li>
+						<li class="li05">
+							<a><input type="button" value="登录" @click="init_two" class="sub-le" /></a>
+							<p>未注册手机登录后自动注册</p>
+						</li>
+					</ul>
+					<!--<ul class="ul01">
+			<li class="li01">
+				<div class="div-left"><img src="img/login1.png" class="img01"/></div>
+				<div class="div-right"><input type="number" placeholder="请输入手机号" v-model="Phone"/></div>
+			</li>
+			<li class="li02">
+				<div class="div-le"><img src="img/login3.png" class="img01"/></div>
+				<div class="div">
+					<div class="div-cent">
+					<input type="password" placeholder="请输入验证码 " v-model="code"/>
+					</div>
+				<div class="div-ri"><input type="button" value="获取验证码" @click="init_one"/></div>
+				</div>
+			</li>
+			<li class="li03" @click="init_two"><input type="button" class="sub" value="登录" /></li>
+		</ul>-->
+				</form>
+			</section>
+		</div>
+		<script type="text/javascript">
+			function psdLogin() {				
+				window.location.href = 'new_login.html'
+				setTimeout(function() {
+					plus.webview.currentWebview().close('none')
+				}, 1000)
+			}
+		</script>
+	</body>
+
+</html>

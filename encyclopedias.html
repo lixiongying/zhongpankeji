@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>石材百科</title>
+    
+    <link href="css/part/mui.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" type="text/css" href="css/part/common.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/part/encyclopedias.css"/>
+    <link rel="stylesheet" href="./css/cloak.css" />
+    
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/part/encyclopedias.js"></script>
+    <script type="text/javascript" src="js/part/vue.js"></script>
+    <script src="js/part/mui.min.js"></script>
+    <script src="js/part/mui.min.js"></script>
+  
+</head>
+<body>
+	<div id="myadd" v-cloak>
+	<header >
+		<div class="header_top">
+			<div class="header_top_out" onclick="mui.back()"><img src="./img/common/out_h.png" alt="" /></div>
+			<div class="header_top_sou" onclick="url(this)" data-url='check.html'>
+				<div>
+					<i></i>
+					<input name="addComment" placeholder="输入石材名称"></inptu>
+				</div>
+			</div>
+		</div>
+		<div class="header_title"> 
+			<ul > 
+		        <li>
+		            <a href="#" id  ="one" @click="class_ul(1)" >分类<em></em></a>
+		            <div class="header_title_nav one" v-show="show_class == 1">
+		            	<div></div>
+		                <p v-for="(x,index) in class_All" @click="class_one(index)" >{{x}}</p>
+		            </div>
+		        </li>
+		    </ul>
+		    <ul > 
+		        <li>
+		            <a  href="#" id="two" @click="class_ul(2)">首字母<em></em></a>
+		            <div class="header_title_nav two" v-show="show_class == 2">
+		            	<div></div>
+		                <p class="click" @click="class_two_all">全部</p>
+		                <p v-for="(x,index) in tetter" @click="class_two(index)">{{x}}</p>
+		            </div>
+		        </li>
+		    </ul>
+		    <ul> 
+		        <li>
+		            <a href="#" id="three"  @click="class_ul(3)">颜色<em></em></a>
+		            <div class="header_title_nav three" v-show="show_class == 3">
+		            	<div></div>
+		                <p class="click" @click="class_three(-1)"><em></em>全部</p>
+		                <p v-for=" (x,index) in color_All" @click="class_three(index)"><em></em>{{x}}色</p>
+		            </div>
+		        </li>
+		    </ul>
+		</div>
+	</header>
+	<div class="bg_tis" v-show="err == 1">
+		<div>
+			<p>该字母无产品信息!</p>
+		</div>
+	</div>
+	<main>
+		<div class="detailed">
+			<div class="detailed_tui">
+				<div class="detailed_title">推荐</div>
+				<div class="detailed_t_img">
+					<div v-for=" x in recommendArr" id="x.id" @click="go(x.id)">
+						<img :src="url+x.img" />
+						<p>{{x.name}}</p>
+					</div>
+				</div>
+			</div>
+			<div v-for="(x,index) in tetter" :id="x" v-show="tetter_All[index].length != 0">
+				<div class="detailed_title">{{x}}</div>
+				<div class="detailed_img">
+					<div v-for="list in tetter_All[index]" :id="list.id" :type="list.type" :color="list.color" @click="go(list.id)">
+						<img :src="url+list.img" alt="" />
+						<p>{{list.name}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+</main>
+</div>
+</body>
+</html>

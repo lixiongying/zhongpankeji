@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/newdetail.css" />
+		<link rel="stylesheet" href="css/cloak.css" />
+		<script type="text/javascript" src="js/main.js"></script>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/page/newdetail.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<title>石材资讯</title>
+	</head>
+	<body>
+<div id="newdetail" v-cloak>
+<header>
+	<a class="left" onclick="out()"><img src="img/return1.png"/></a>
+	<p class="center">石材资讯</p>
+</header>
+
+<section>
+	<p class="p01">{{newList.ATitle}}</p>
+	<div class="content">
+		{{newList.AContent}}
+		<!--<p>据土耳其《世界报》报道，中国作为全球最大天然石材进口国，2014年自土进口石材达17亿美元，占当年中国石材进口总额的近一半。</p>
+		<img src="img/de.png"/>
+		<p>在厦门国际石材展参展的土耳其爱琴海出口商协会会长梅夫吕特表示,2015年受中
+			国建筑行业需求下降的影响，
+			土对华石材出口额下降至7.27亿美元。但从目前中国经济发展势头看，未来中国市场对天然石材的需求仍然巨大，土耳其石材出口商应把握时机，提前布局。
+		</p>-->
+	</div>
+	<p class="p02"><span>{{newList.aReadTimes}}</span><span>{{newList.APubdate}}</span></p>
+</section>
+</div>
+</body>
+</html>

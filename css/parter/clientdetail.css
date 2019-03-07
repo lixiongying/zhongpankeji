@@ -1,0 +1,117 @@
+img {
+  width: 100%;
+  height: 100%;
+}
+.box {
+  width: 100%;
+  height: 5.375rem;
+}
+.box_ul {
+  width: 100%;
+  height: 5.375rem;
+  background-color: #ffffff;
+  position: relative;
+  /*padding: 10px;*/
+}
+.box_ul .box_li {
+  float: left;
+}
+.box_ul .box_icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-left: 0.625rem;
+  margin-top: 0.625rem;
+}
+.box_ul .box_item {
+  width: auto;
+  margin-left: 10px;
+}
+.box_item .box_item_o {
+  font-size: 15px;
+  color: #333333;
+  height: 15px;
+  line-height: 12px;
+  margin-top: 10px;
+}
+.box_item .box_item_s {
+  width: 4.6875rem;
+  margin-top: 0.5rem;
+  height: 0.9375rem;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #2c81d2;
+  border: 1px solid #0687ff;
+  line-height: 0.9375rem;
+  text-align: center;
+}
+.box_item .box_item_t {
+  height: 0.625rem;
+  line-height: 0.625rem;
+  font-size: 12px;
+  color: #999999;
+  margin-top: 0.3125rem;
+}
+.box_ul .box_edit {
+  width: 0.75rem;
+  height: 0.75rem;
+  float: right;
+  margin-right: 1.375rem;
+  margin-top: 0.5625rem;
+}
+.box_ul .state {
+  width: 2.5rem;
+  height: 1.25rem;
+  text-align: center;
+  line-height: 1.25rem;
+  border: 1px solid #0687ff;
+  color: #0687ff;
+  position: absolute;
+  top: 2.0625rem;
+  right: 0.75rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+}
+.mui-slider .mui-segmented-control.mui-segmented-control-inverted ~ .mui-slider-group .mui-slider-item {
+  border: none;
+}
+.mui-slider-item {
+  background: white;
+}
+#slider .scorll_item {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+  border-bottom: 5px solid #007aff;
+}
+.mui-segmented-control.mui-scroll-wrapper .mui-control-item {
+  padding: 0;
+}
+.mui-fullscreen {
+  top: 8.875rem;
+}
+.scorll_ul {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.scorll_ul .scorll_ul_li {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-top: 0.75rem;
+}
+.scorll_ul .scorll_ul_li .scorll_liImg {
+  width: 5.75rem;
+  height: 3.8125rem;
+  margin-bottom: 0.3125rem;
+}
+.scorll_ul .scorll_ul_li .scorll_litwo {
+  color: #999999;
+  font-size: 0.625rem;
+}

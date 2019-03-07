@@ -1,0 +1,170 @@
+{
+	"index1.html": {
+		"resources": [
+			"index.html"
+		],
+		"refer": [
+			"index.html",
+			"sand_table.html",
+			"stone_street.html",
+			"my_page.html"
+		]
+	},
+	"index.html": {
+		"refer": [
+			"encyclopedias.html",
+			"stone.html",
+			"business.html",
+			"proddetail.html",
+			"setting.html",
+			"new_login.html",
+			"new.html"
+		],
+		"resources": []
+	},
+	"encyclopedias.html": {
+		"refer": [
+			"prodetail.html",
+			"check.html"
+		],
+		"resources": []
+	},
+	"prodetail.html": {
+		"refer": [
+			"encyclopedias.html",
+			"business.html"
+		],
+		"resources": []
+	},
+	"check.html": {
+		"refer": [
+			"prodetail.html"
+		],
+		"resources": []
+	},
+	"stone.html": {
+		"refer": [
+			"proddetail.html"
+		],
+		"resources": []
+	},
+	"proddetail.html": {
+		"refer": [
+			"stone.html",
+			"index.html",
+			"business.html",
+			"stone_street.html",
+			"setting.html",
+			"index1.html"
+		],
+		"resources": []
+	},
+	"stone_street.html": {
+		"refer": [
+			"business.html",
+			"proddetail.html"
+		],
+		"resources": []
+	},
+	"business.html": {
+		"refer": [
+			"proddetail.html",
+			"prodetail.html",
+			"collect.html"
+		],
+		"resources": []
+	},
+	"information.html": {
+		"refer": [
+			"my_page.html"
+		],
+		"resources": []
+	},
+	"my_page.html": {
+		"refer": [
+			"information.html",
+			"collect.html",
+			"contact.html",
+			"about.html",
+			"setting.html",
+			"new_login.html",
+			"hezuoclient.html",
+			"goods.html",
+			"levelrun.html",
+			"import.html",
+			"product.html",
+			"login.html"
+		],
+		"resources": []
+	},
+	"setting.html": {
+		"refer": [
+			"index.html",
+			"new_login.html",
+			"reset.html"
+		],
+		"resources": []
+	},
+	"new_login.html": {
+		"refer": [
+			"my_page.html",
+			"telelogin.html"
+		],
+		"resources": []
+	},
+	"telelogin.html": {
+		"refer": [
+			"index.html",
+			"new_login.html"
+		],
+		"resources": []
+	},
+	"collect.html": {
+		"refer": [
+			"business.html",
+			"proddetail.html"
+		],
+		"resources": []
+	},
+	"newde.html": {
+		"refer": [
+			"new.html"
+		]
+	},
+	"new.html": {
+		"refer": [
+			"newde.html",
+			"newdetail.html"
+		]
+	},
+	"hezuoclient.html": {
+		"refer": [
+			"clientdetail.html"
+		]
+	},
+	"import.html": {
+		"refer": [
+			"my_page.html"
+		]
+	},
+	"levelrun.html": {
+		"refer": [
+			"addbusiness.html"
+		]
+	},
+	"reset.html": {
+		"refer": [
+			"setting.html"
+		]
+	},
+	"newdetail.html": {
+		"refer": [
+			"new.html"
+		]
+	},
+	"login.html": {
+		"refer": [
+			"my_page.html"
+		]
+	}
+}

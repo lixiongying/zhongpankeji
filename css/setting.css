@@ -1,0 +1,23 @@
+/*头部*/
+header{ background-color: #373737; height: 60px; display: flex; justify-content: flex-start; line-height: 60px;}
+header a{ width: 20%;}
+.left img{ position: relative; top:0.5rem;left: 0.5rem;width: 1.6rem}
+.center{ font-size: 18px; color: #fff; width: 60%; text-align: center;}
+
+/*主要内容*/
+body{ background-color:#f8f8f8;}
+.ul01{ border-bottom: 1px solid #eee; border-top: 1px solid #eee; margin-top: 10px; background-color: #fff;}
+.ul01 li{ line-height: 50px;  margin: 0 0; font-size: 15px; }
+.ul01 li a,.a01{ display: flex; justify-content: space-between;  align-items: center; margin:  0 0 0 20px;}
+.ul01 li a,.ul02 li a{ color: #666;}
+.img01{ width: 8px; height: 16px;}
+.ul01 li:nth-child(1){ border-bottom: 1px solid #eee; }
+.ul02{ margin: 0 auto; text-align: center;}
+.ul02 li{ line-height: 50px; border-bottom: 1px solid #eee; border-top:1px solid #eee; 
+margin-bottom: 8px;padding: 0 0; background-color: #fff; font-size: 15px;}
+.ul02 li:nth-child(1){ margin-top: 8px;}
+.ul01 img,.ul02 img{
+	position: relative;
+	right: 7%;
+}
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/setting.css" />
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<title>我的设置</title>
+	</head>
+	<body>
+<header>
+	<a class="left" onclick="out()"><img src="img/return1.png"/></a>
+	<p class="center">设置</p>
+</header>
+<section>
+	<ul class="ul01">
+		<li onclick='clearStore()'><a><span>清除缓存</span><img src="img/set.png" class="img01"/></a></li>
+		<li><a onclick="url(this)" data-url='help.html'><span>使用帮助</span><img src="img/set.png" class="img01"/></a></li>	
+	</ul>
+	<ul class="ul02">
+		<li><a onclick="url(this)" data-url='reset.html' class="a01"><span>修改密码</span><img src="img/set.png" class="img01"/></a></li>
+		<li><a onclick="url(this)" data-url='new_login.html'>切换帐号</a></li>
+		<li onclick="loginout()"><a >退出登录</a></li>
+	</ul>
+</section>
+<script type="text/javascript">
+	var loginout = function(){
+		var userid=localStorage.getItem("museId");
+//		alert(userid)''
+		if(userid==''||userid==undefined||userid==null){
+			return
+		}else{
+			var btnArray = ['否', '是'];
+	        mui.confirm('你确定要退出么', btnArray, function(e) {
+	            if (e.index == 0) {
+	            	localStorage.setItem("museOnlineTag",null);
+			   		localStorage.setItem("musePwd",'');
+			   		localStorage.setItem("museId",'');
+			   		localStorage.setItem("mstoIsCert",1);
+//			   		plus.webview.getWebviewById(id);  
+			   		plus.webview.getWebviewById('index.html').reload(true);
+			   		plus.webview.getWebviewById('stone_street.html').reload(true);
+			   		plus.webview.getWebviewById('sand_table.html').reload(true);
+			   		plus.webview.getWebviewById('my_page.html').reload(true);
+			   		setTimeout(()=>{	            		
+	            		mui.openWindow({
+							url:'new_login.html',
+							id:'new_login.html'
+						})
+//	            		plus.webview.currentWebview().close('none');
+	            	},1200)
+//	            	setTimeout(()=>{	            		
+//	            		plus.webview.currentWebview().close('none');
+//	            	},1500)
+	            } else {
+	               
+	            }
+	        }) 
+		}
+
+	}
+	var clearStore=function(){
+		setTimeout(function(){
+			mui.toast('清楚缓存成功')
+		},1500)
+	}
+
+</script>
+	</body>
+</html>

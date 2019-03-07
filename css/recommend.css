@@ -1,0 +1,17 @@
+/*头部*/
+header{ background-color: #373737; height: 65px; display: flex; justify-content: flex-start;}
+header a{ width: 15%;}
+header div{ width: 82%;}
+.header-left img{ margin-top: 20px; width: 26px; height:26px; margin-left: 12px;}
+.header-right img{ margin: 15px 0 0 15px;}
+.header-center input{ border-radius: 8px; line-height: 40px; height: 40px; margin-top: 10px; width: 85%; 
+padding-left: 40px; font-size: 18px; border:none; padding-top: 3px;}
+.header-center{ position: relative;}
+.img-wei{ position: absolute; left: 10px; top:22px; width: 22px; height: 22px;}
+
+/*主要内容*/
+.ul01{ display: flex; flex-wrap: wrap; margin: 8px;}
+.ul01 li{ width: 45%; margin: 8px;}
+.img01{ width: 100%;}
+.p01{ font-size: 15px; color: #333;}
+.p02{ font-size: 13px; color: #999; line-height: 20px;}

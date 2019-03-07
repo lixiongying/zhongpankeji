@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>港口海关信息</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<link href="css/part/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/part/common.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/part/settlement.css"/>
+		<link rel="stylesheet" href="./css/cloak.css" />
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/part/common.js"></script>
+		<script type="text/javascript" src="js/part/settlement.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<script type="text/javascript" src="js/part/vue.js"></script>
+	</head>
+
+	<body>
+		<div id="myadd" v-cloak>
+		<header>
+			<div class="header">
+				<em id="out"></em>
+				<p>港口海关信息</p>
+			</div>
+		</header>
+		<main>
+			<h1>码头信息</h1>
+			<div id="name">
+				<div>码头名称:</div>
+				<div>
+					<span>{{portName}}</span>
+				</div>
+			</div>
+			<div id="start">
+				<div>抵达日期:</div>
+				<div>
+					<span>{{oiarArriveTime}}</span>
+				</div>
+			</div>
+			<div id="over">
+				<div>放行日期:</div>
+				<div>
+					<span>{{oiarLeaveTime}}</span>
+				</div>
+			</div>
+			<div id="bin_day">
+				<div>免仓柜期起始时间:</div>
+				<div>
+					<span>{{oiarFreeBeginTime}}</span>
+				</div>
+			</div>
+			<h2>通关状态</h2>
+			<div id="state">
+				<div>状态:</div>
+				<div>
+					<span>{{passStatus}}</span>
+				</div>
+			</div>
+		</main>
+		</div>
+	</body>
+
+</html>

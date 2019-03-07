@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>公司详情</title>
+
+		<!--//CSS-->
+		<link href="css/part/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="./css/part/share.min.css">
+		<link rel="stylesheet" type="text/css" href="css/part/common.css" />
+		<link rel="stylesheet" type="text/css" href="./css/part/business.css" />
+		<link rel="stylesheet" href="./css/cloak.css" />
+		<!--//JS-->
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/part/mui.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<script type="text/javascript" src="js/part/md5.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>	
+		<script type="text/javascript" src="js/part/business.js"></script>
+		<script type="text/javascript" src="js/part/vue.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<!--//分享JS-->
+		<script src="./layer_mobile/layer.js"></script>
+		<script type="text/javascript" src="js/share.js"></script>
+		<script src="./js/part/social-share.min.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<div class="header_top">
+				<div class="header_fun" id="myadp" v-cloak>
+					<div id="out" onClick="mui.back()">
+						<img src="./img/common/out (1).png" alt="" />
+					</div>
+					<div onclick="do_share();">
+						<img src="./img/common/share.png" alt="" />
+					</div>
+					<div id="collection" @click="collection">
+						<img src="./img/common/collection0.png" alt="" />
+					</div>
+					<div class="bg_tis" v-show="err == 1">
+						<div>
+							<p>错误！请重试!</p>
+						</div>
+					</div>
+				</div>
+				<div id="share_box">
+					<div class=".share_null"></div>
+					<div class="social-share" data-initialized="true" style="text-align: center;" data-url="http://192.168.0.149:8020/shicai/business.html#" data-title="某个石材公司">
+				 		<a href="#" class="social-share-icon icon-weibo"></a>
+						<!--<a href="#" class="social-share-icon icon-wechat"></a>-->
+						<a href="#" class="social-share-icon icon-qq"></a>
+						<a onclick="shareHref()" class="social-share-icon icon-wechat"></a>
+					</div>
+					<div class=".share_null"></div>
+				</div>
+				<div style="display: none;">
+					<textarea id="sharecontent" rows="3">我正在使用APP，赶紧跟我一起来体验！</textarea>
+					<input id="sharehref" class="sharehref" type="url" value="" placeholder="请输入要分享的链接地址" />
+					<input id="sharehrefTitle" class="sharehref" type="text" value="最好的APP" placeholder="请输入要分享的链接标题" />
+					<input id="sharehrefDes" class="sharehref" type="text" value="我正在使用APP，赶紧跟我一起来体验！" placeholder="请输入要分享的链接描述" />
+				</div>
+				<div class="header_lunbo">
+					<div class="mui-slider">
+						<div class="mui-slider-group iimg">
+							<div class="mui-slider-item">
+								<img src="./img/business/lunbo1.png" alt="" />
+							</div>
+							<div class="mui-slider-item">
+								<img src="./img/business/lunbo2.png" alt="" />
+							</div>
+							<div class="mui-slider-item">
+								<img src="./img/business/lunbo3.png" alt="" />
+							</div>
+							<div class="mui-slider-item">
+								<img src="./img/business/lunbo4.png" alt="" />
+							</div>
+							<div class="mui-slider-item">
+								<img src="./img/business/lunbo5.png" alt="" />
+							</div>
+						</div>
+					</div>
+					<div class="header_lunbo_o">
+					</div>
+				</div>
+			</div>
+			<div class="img_look" onclick="img_show(0)">
+				<img src="img/tian1.png" alt="" />
+			</div>
+			<div class="header_bottom" id="myapp" v-cloak>
+				<div class="header_details">
+					<p id=name>{{name}}</p>
+					<p>
+						<span class="ellipsis">
+					</span>
+						<span id="all"><i>......</i>全文</span></p>
+				</div>
+				<div class="header_int">
+					<div class="header_int_top">
+						<div>
+							<em></em>
+						</div>
+						<div>
+							<p>{{addr}}</p>
+						</div>
+					</div>
+					<div class="header_int_bottom">
+						<div>
+							<em></em>
+						</div>
+						<div id="Phone">
+							<p>{{Phone}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div id="myadd" v-cloak>
+			<footer>
+				<div>
+					<div class="footer_top">
+						<div class="click" @click="goodss(0)">
+							<p>产品列表</p>
+							<em></em>
+						</div>
+						<div @click="goodss(1)">
+							<p>清货信息</p>
+							<em></em>
+						</div>
+					</div>
+					<div class="footer_bottom">
+						<div class="footer_bottom_left" v-show="index_goods==0 &&product_show!=0">
+							<div v-for="(x,index) in product.mgooImage" @click="stone(product.mgooId[index])">
+								<div>
+									<img :src=url+product.mgooImage[index] alt="" />
+									<p>{{product.mgooName[index]}}</p>
+								</div>
+							</div>
+						</div>
+						<div class="footer_bottom_left" v-show="product_show==0 && index_goods==0">
+							<div style="width:100%;text-align: center;">
+								<div>
+									<p style="display: block;font-size: 1.2rem;line-height: 2.8rem;">暂无产品</p>
+								</div>
+							</div>
+						</div>
+						<div class="footer_bottom_right" v-show="index_goods==1">
+							<div v-for="(x,index) in clear_goods.mgooImage">
+								<div>
+									<img :src=url+clear_goods.mgooImage[index] alt="" onclick="img_show_qing(this)" />
+									<p>{{clear_goods.mgooClearExplain[index]}}</p>
+									<p>￥{{clear_goods.mgooMinThickness[index]}}-{{clear_goods.mgooMaxThickness[index]}}/m<sup>2</sup></p>
+									<p>600*600*{{clear_goods.mgooMaxThickness[index]}}mm</p>
+								</div>
+							</div>
+						</div>
+						<div class="footer_bottom_right" v-show="clear_show==0 && index_goods==1">
+							<div style="width:100%;text-align: center;">
+								<div>
+									<p style="display: block;font-size: 1.2rem;line-height: 2.8rem;">暂无清货信息</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script type="text/javascript">
+			$('#sharehref').val('http://192.168.0.149:8020/zhongpan2/index.html');
+			function do_share(){
+			    layer.open({
+			    type: 1
+			    ,content: $('#share_box').html()
+			    ,anim: 'up'
+			    ,style: 'position:fixed; bottom:0; left:0; width: 100%; padding:10px 0; border:none;'
+			    });
+			}
+			var img_show = function(index){
+				if(index == 0){
+					$('.img_look').css('display','none')
+				}else{
+					$('.img_look').css('display','block')
+					var url = $('.mui-slider .mui-slider-group div:eq('+(index*1-1)+') img').attr('src')
+					$('.img_look img').attr('src',url)
+					console.log(index)
+				}
+			}
+			var img_show_qing = function(index){
+				if(index == 0){
+					$('.img_look').css('display','none')
+				}else{
+					//直接获取src（getAttribute）
+					var url = index.getAttribute('src')
+					console.log(url)
+					$('.img_look').css('display','block')
+					$('.img_look img').attr('src',url)
+	//				console.log(index)
+				}
+			}
+		</script>
+	</body>
+
+</html>

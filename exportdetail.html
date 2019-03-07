@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/exportdetail.css" />
+		<link rel="stylesheet" href="./css/cloak.css" />
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/exportdetail.js" ></script>
+		<script type="text/javascript" src="js/part/vue.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<title>订单详情</title>
+	</head>
+	<body>
+<div id="myadd" v-cloak>
+<header>
+	<a class="left" @click="out"><img src="img/return1.png"/></a>
+	<p class="center">订单详情</p>
+</header>
+<section>
+	<ul class="ul01">
+		<li><span>系统单号：</span><span>{{oexpNo}}</span></li>
+		<li><span>货物名称：</span><span>{{oimaGoodsType}}</span></li>
+		<li><span>进出口类型：</span><span>{{PortType}}</span></li>
+		<li><span>货物当前地址：</span><span>{{address}}</span></li>
+		<li v-show="Im_show == 1"><span>客户名称：</span><span>{{oimaName}}</span></li>
+		<li><span>货物重量：</span><span>{{oiboNum}}</span></li>
+		<li v-show="Im_show == 1"><span>起运港：</span><span>{{oimaBeginPort}}</span></li>
+		<li v-show="Im_show == 1"><span>目的港：</span><span>{{oimaEndPort}}</span></li>
+		<li v-show="Im_show == 1"><span>货物参考值：</span><span>{{oimaGoodsInfo}}</span></li>
+		<li><span>支付状态：</span><span>{{oexpStatus}}</span></li>
+		<li v-show="leaveTime_show == 1"><span>计划开出日期：</span><span>{{leaveTime}}</span></li>
+		<li>
+			<div v-show='oiimUrl_show == 1'>
+			<span>PI附件：</span>
+			<img :src="oiimUrl"/>
+			</div>
+			<div v-show='oiimBill_show == 1'>
+			<span>码单附件：</span>
+			<img :src="oiimBill"/>
+			</div>
+			<div v-show='oipaCreditImage_show == 1'>
+			<span >信用证副本:</span>
+			<img :src="oipaCreditImage"/>
+			</div>
+		</li>
+		<li></li>
+		<li><span>船运公司：</span><span>{{oiboName}}</span></li>
+		<li><span>截关时间：</span><span>{{oiboDueTime}}</span></li>
+		<li><span>柜量：</span><span>{{oiboNum}}</span></li>
+		<li v-show="Im_show == 1"><span>货代公司：</span><span>{{oiboForwardFore}}</span></li>
+		<li v-show="Im_show == 1"><span>海运价：</span><span>￥{{oiboPrice}}</span></li>
+	</ul>
+</section>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/common.css" />
+    	<link rel="stylesheet" href="./css/part/share.min.css">
+		<link rel="stylesheet" href="css/prodetail.css" />
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/page/prodetail.js"></script>
+		<script type="text/javascript" src="js/part/vue.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<!--//分享JS-->
+		<script src="./layer_mobile/layer.js"></script>
+		<script src="js/share.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/part/social-share.min.js"></script>
+		<title>产品详细页</title>
+	</head>
+	<body>
+		<div id="myadd" v-cloak>
+		<div class="bg_tis" v-show="err == 1">
+			<div>
+				<p>错误！请重试!</p>
+			</div>
+		</div>
+		<div class="img_look" v-show="img_c_show==1" @click="img_show(0)">
+			<img :src="mgooImage" alt="" />
+		</div>
+		<nav>
+			<img @click="img_show(1,mgooImage)" :src="mgooImage" alt="" />
+			<a class="return" @click="out"><img src="img/return.png"/></a>
+			<a  class="fen" onclick="do_share();"><img src="img/fen.png"/></a>
+			<a  class="zang" @click="collection"><img v-show="collection_goos == '0'" src="img/zang.png"/><img v-show="collection_goos == '1'" src="./img/common/collection1.png"/></a>
+		</nav>
+		<div id="share_box" >
+		    <div class="social-share" data-initialized="true" style="text-align: center;" :data-url="link_url"  :data-title="name">
+		        <a href="#" class="social-share-icon icon-weibo"></a>
+		        <a onclick="shareHref()" class="social-share-icon icon-wechat"></a>
+		        <a href="#" class="social-share-icon icon-qq"></a>
+		        <a href="#" class="social-share-icon icon-qzone"></a>
+		    </div>
+			<div class=".share_null"></div>		
+		</div>
+		<div style="display: none;">
+			<textarea id="sharecontent" rows="3">我正在使用APP，赶紧跟我一起来体验！</textarea>
+			<input id="sharehref" class="sharehref" type="url" value="" placeholder="请输入要分享的链接地址" />
+			<input id="sharehrefTitle" class="sharehref" type="text" value="最好的APP" placeholder="请输入要分享的链接标题" />
+			<input id="sharehrefDes" class="sharehref" type="text" value="我正在使用APP，赶紧跟我一起来体验！" placeholder="请输入要分享的链接描述" />
+		</div>
+		<div class="share_bg" onclick="no_share();"></div>
+		<ul class="ul01">
+			<li>{{name}}</li>
+			<li v-show="alias != undefined">{{alias}}/{{colorSystem}}</li>
+		</ul>
+		<div class="bg"></div>
+		<ul class="ul02">
+			<li><span>类别：</span>{{mgooType}}</li>
+			<li><span>色系：</span>{{colorSystem}}</li>
+			<li><span>产地：</span>{{origin}}</li>
+			<li class="li-span"><div class="span-left">矿口：</div><div class="span-right">{{mine}}</div></li>
+			<li><span>底色：</span>{{baseColor}}</li>
+			<li><span>花纹：</span>{{figure}}</li>			
+		</ul>
+		<div class="bg"></div>
+		<ul class="ul03">
+			<li><span>特色：</span>{{special}}</li>
+			<li><span>石材用途：</span>{{useFor}}</li>
+			<li class="li-span"><div class="span-le">石材优劣判定：</div><div class="span-ri">{{stoneGoodAndBad}}</div></li>
+			<li class="li-span"><div class="sp-left">价格区间：</div><div class="sp-right">{{specPrice}}<br/>{{specPrice}}<br/>{{specPrice}}</div></li>				
+		</ul>
+		<div class="bg"></div>
+		<ul class="ul04">
+			<li class="flex-li"><div class="li-left">装修案例：</div><div class="li-right"><img v-for="x in decorationArray" @click="decoration_show(1,url+x.img)" :src="url+x.img"/></div></li>
+			<li class="li-span"><div class="sp-le">特别感谢：</div><div class="sp-ri">{{storeName}}</div></li>
+		</ul>
+		<p class="p01" v-show="likeMallGoodsArray.length !=0"><img src="img/bg.jpg"><span>相似产品：</span></p>
+		<ul class="ul06" v-show="likeMallGoodsArray.length !=0">
+			<div >
+				<li v-for="x in likeMallGoodsArray" @click="similar(x.likeId)"><img :src="url+x.likeImg" alt="" /><a class="Mall"   >{{x.likeName}}</a></li>
+			</div>
+		</ul>
+		<p class="p01"><img src="img/bg.jpg"><span>推荐企业</span></p>
+		<ul class="ul05">
+			<li v-for="x in recommend" @click="go(x.mstoId)">
+				<div class="div-left"><img :src="url + x.mstoImage"/></div>
+				<div class="div-right">
+					<p class="ri-p01">{{x.mstoName}}</p>
+					<p class="ri-p02">电话：{{x.mstoPhone}}</p>
+					<p class="ri-p02">地址：{{x.mstoAddress}}</p>
+				</div>
+			</li>
+			<!--<li>
+				<div class="div-left"><img src="img/co2.png"/></div>
+				<div class="div-right">
+					<p class="ri-p01">长寿县东盈石材厂</p>
+					<p class="ri-p02">电话：15842411546</p>
+					<p class="ri-p02">地址：长寿县下东街北区路144号</p>
+				</div>
+			</li>
+			<li>
+				<div class="div-left"><img src="img/co3.png"/></div>
+				<div class="div-right">
+					<p class="ri-p01">长城国际石材有限公司</p>
+					<p class="ri-p02">电话：15842411546</p>
+					<p class="ri-p02">地址：长寿县下东街北区路144号</p>
+				</div>
+			</li>-->
+		</ul>
+		</div>
+	</body>
+	<script>
+	$('#sharehref').val('http://192.168.0.149:8020/zhongpan2/index.html');
+	var do_share = function(){
+		$('.share_bg').show();
+		$('#share_box').show();
+	}
+	var no_share = function(){
+		$('.share_bg').hide();
+		$('#share_box').hide();
+	}
+</script>
+</html>
+

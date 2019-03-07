@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/stone.css" />
+		<link rel="stylesheet" href="./css/cloak.css" />
+		
+		<script type="text/javascript" src="js/mui.min.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+		<script type="text/javascript" src="js/mui.pullToRefresh.js" ></script>
+		<script type="text/javascript" src="js/mui.pullToRefresh.material.js" ></script>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/page/stone.js"></script>
+		<script type="text/javascript">
+			var go = function(id){
+					localStorage.setItem("msfoId",id);
+				   	museId= localStorage.getItem("msfoId"); 
+				   	console.log(museId)
+				   	mui.openWindow({
+				   		url:'proddetail.html',
+				   		id:'proddetail.html'
+				   	})
+//					window.location.href="proddetail.html"
+				}
+			function gotos(){
+				mui.back()
+//				window.history.go(-1);
+			}
+		</script>
+		<title>天天石材展</title>
+	</head>
+	<body>
+		<header id="myadd" v-cloak>
+			<a class="header-left" onclick="gotos()"><img src="img/return1.png"/></a>
+			<div class="header-center"><img src="img/sou.png" class="img-wei" style="display: none;"/>
+			<input type="text" style="display: none;" placeholder="请输入关键词"/>
+			</div>
+		</header>
+			<div id="slider" class="mui-slider mui-fullscreen">
+				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div class="mui-scroll">
+						<a class="mui-control-item mui-active" href="#item1mobile">
+							大理石
+						</a>
+						<a class="mui-control-item" href="#item2mobile">
+							玄武岩
+						</a>
+						<a class="mui-control-item" href="#item3mobile">
+							石灰石
+						</a>
+						<a class="mui-control-item" href="#item4mobile">
+							板岩
+						</a>
+						<a class="mui-control-item" href="#item5mobile">
+							砂岩
+						</a>
+						<a class="mui-control-item" href="#item6mobile">
+							其他
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view ul01">
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang1.jpg"/>
+										<p>富产金秋矿山1</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang2.jpg"/>
+										<p>富产金秋矿山1</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang3.jpg"/>
+										<p>富产金秋矿山1</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang4.jpg"/>
+										<p>富产金秋矿山1</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>	
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view ul01">
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang1.jpg"/>
+										<p>富产金秋矿山2</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang2.jpg"/>
+										<p>富产金秋矿山2</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang3.jpg"/>
+										<p>富产金秋矿山2</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang4.jpg"/>
+										<p>富产金秋矿山2</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>									
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view ul01">
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang1.jpg"/>
+										<p>富产金秋矿山3</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang2.jpg"/>
+										<p>富产金秋矿山3</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang3.jpg"/>
+										<p>富产金秋矿山3</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang4.jpg"/>
+										<p>富产金秋矿山3</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>									
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item4mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view ul01">
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang1.jpg"/>
+										<p>富产金秋矿山4</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang2.jpg"/>
+										<p>富产金秋矿山4</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang3.jpg"/>
+										<p>富产金秋矿山4</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang4.jpg"/>
+										<p>富产金秋矿山4</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>									
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item5mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view ul01">
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang1.jpg"/>
+										<p>富产金秋矿山5</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang2.jpg"/>
+										<p>富产金秋矿山5</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang3.jpg"/>
+										<p>富产金秋矿山5</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang4.jpg"/>
+										<p>富产金秋矿山5</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>									
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item6mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view ul01">
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang1.jpg"/>
+										<p>富产金秋矿山6</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang2.jpg"/>
+										<p>富产金秋矿山6</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang3.jpg"/>
+										<p>富产金秋矿山6</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>
+									<li class="mui-table-view-cell li-01">
+										<a>
+										<img src="img/zang4.jpg"/>
+										<p>富产金秋矿山6</p>
+										<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>
+										</a>
+									</li>									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+		<script>
+			mui.init();
+			(function($) {
+				//阻尼系数
+				var deceleration = mui.os.ios?0.003:0.0009;
+				$('.mui-scroll-wrapper').scroll({
+					bounce: false,
+					indicators: true, //是否显示滚动条
+					deceleration:deceleration
+				});
+				$.ready(function() {
+					//循环初始化所有下拉刷新，上拉加载。
+//					$.each(document.querySelectorAll('.mui-slider-group .mui-scroll'), function(index, pullRefreshEl) {
+//						$(pullRefreshEl).pullToRefresh({
+////							down: {
+////								callback: function() {
+////									var self = this;
+////									setTimeout(function() {
+////										var ul = self.element.querySelector('.mui-table-view');
+////										ul.insertBefore(createFragment(ul, index, 10, true), ul.firstChild);
+////										self.endPullDownToRefresh();
+////									}, 1000);
+////								}
+////							},
+//							up: {
+//								callback: function() {
+//									var self = this;
+//									setTimeout(function() {
+////										var ul = self.element.querySelector('.mui-table-view');
+////										ul.appendChild(createFragment(ul, index, 5));
+////										self.endPullUpToRefresh();
+//									}, 1000);
+//								}
+//							}
+//						});
+//					});
+//					var createFragment = function(ul, index, count, reverse) {
+//						var length = ul.querySelectorAll('li').length;
+//						var fragment = document.createDocumentFragment();
+//						var li;
+//						for (var i = 1; i < count; i++) {
+//							li = document.createElement('li');
+//							a = document.createElement('a');
+//							li.className = 'mui-table-view-cell'+' li-01';
+////							li.innerHTML = '第' + (index + 1) + '个选项卡子项-' + (length + (reverse ? (count - i) : (i + 1)));
+//							a.innerHTML="<img src='img/zang"+i+".jpg'/>"+"<p>富产金秋矿山1</p>"+
+//							"<p>拥有丰富的矿产资源，多台大型开采设备、加工设备花岗岩，少量金刚石</p>";
+//							li.appendChild(a);
+//							fragment.appendChild(li);
+//						}
+//						return fragment;
+//					};
+				});
+			})(mui);
+		</script>
+
+	</body>
+</html>

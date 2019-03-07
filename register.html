@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/register.css" />
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/register.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/part/vue.js"></script>
+		<script type="text/javascript" src="js/session.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<title>注 册</title>
+	</head>
+	<body>
+<div id="myadd">
+<header>
+	<a class="left" @click="out"><img src="img/return1.png"/></a>
+	<p class="center">注 册</p>
+</header>
+<div class="bg_tis" v-show="err == 1">
+	<div>
+		<p>错误！请重试!</p>
+	</div>
+</div>
+<section>
+	<form>
+		<ul class="ul01">
+			<li class="li01">
+				<div class="div-left"><img src="img/login1.png" class="img01"/></div>
+				<div class="div-right"><input type="number" placeholder="请输入手机号" v-model="phone"/></div>
+			</li>
+			<li class="li02">
+				<div class="div-le"><img src="img/login3.png" class="img01"/></div>
+				<div class="div">
+					<div class="div-cent">
+					<input type="password" placeholder="请输入验证码" v-model="code"/>
+					</div> 
+				<div class="div-ri"><input type="button"  value="获取验证码" @click="updata"/></div>
+				</div>
+			</li>
+			<li class="li04">
+				<div class="div-left mt"><img src="img/login2.png" class="img01"/></div>
+				<div class="div-right"><input type="password" placeholder="请输入最少6位密码" v-model="password"/></div>
+			</li>
+			<li class="li03" v-show="go_show==0" @click="go_c_show"><input type="button" class="sub" value="注册"/></li>
+			<li class="li03" v-show="go_show==1" @click="go"><input type="button" class="sub" value="注册"/></li>
+		</ul>
+	</form>
+</section>
+</div>
+	</body>
+</html>

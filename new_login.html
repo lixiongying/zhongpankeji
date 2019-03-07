@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/new_login.css" />
+		<link rel="stylesheet" href="./css/cloak.css" />
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/new_login.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/part/vue.js"></script>
+		<script type="text/javascript" src="js/session.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<title>登录</title>
+	</head>
+
+	<body>
+		<div id="myadd">
+			<header>
+				<a class="left" onclick="mui.back()"><img src="img/login_x.png" /></a>
+			</header>
+			<div class="bg_tis" v-show="err == 1">
+				<div>
+					<p>错误！请重试！</p>
+				</div>
+			</div>
+			<div class="ul01">
+				<li class="li01">
+					<a @click="phoneLogin()" :class="showflag==1?'click':''">手机登录</a><span>丨</span>
+					<a @click="psdLogin()" :class="showflag==0?'click':''">密码登录</a>
+				</li>
+			</div>
+			<section v-show="showflag==0">
+				<form>
+					<ul class="ul01">
+						<!--<li class="li01">
+							<a onclick="phoneLogin()">手机登录</a><span>丨</span>
+							<a class="click">密码登录</a>
+						</li>-->
+						<li class="li02">
+							<div class="div-right"><input type="number" placeholder="手机号" v-model="museUserName" /></div>
+						</li>
+						<li class="li02">
+							<div class="div-right"><input type="password" placeholder="密码" v-model="musePwd" /></div>
+						</li>						
+						<li class="li05">
+							<a><input type="button" value="登录" @click="on" class="sub-le" /></a>
+							<p>未注册手机登录后自动注册</p>
+						</li>
+					</ul>
+				</form>
+			</section>
+			<section v-show="showflag==1">
+				<form>
+					<ul class="ul001">
+						<li class="li02">
+							<div class="div-right"><input type="number" placeholder="手机号" v-model="Phone" /></div>
+						</li>
+						<li class="li02">
+							<div class="div-right">
+								<input type="number" maxlength="6" placeholder="验证码" v-model="code" />
+								<span class="chack" v-show="chack_show == 1" @click="init_ones">获取验证码</span>
+								<span id="chack" v-show="chack_show == 0" class="chack">{{content}}</span>
+							</div>
+						</li>
+						<li class="li05">
+							<a><input type="button" value="登录" @click="init_two" class="sub-le" /></a>
+							<p>未注册手机登录后自动注册</p>
+						</li>
+					</ul>
+				</form>
+			</section>
+		</div>
+		<script type="text/javascript">
+		
+		</script>
+	</body>
+
+</html>

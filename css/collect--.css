@@ -1,0 +1,26 @@
+/*头部*/
+header{ background-color: #373737; height: 60px; display: flex; justify-content: flex-start; line-height: 60px;}
+header a{ width: 20%;}
+.left img{ margin-top: 5px;}
+.center{ font-size: 18px; color: #fff; width: 60%; text-align: center;}
+
+/*主要内容*/
+.ul01{ display: flex; border-bottom: 1px solid #eee; height: 40px; line-height: 40px;}
+.ul01 li{ width: 50%; text-align: center; font-size: 16px;}
+.active{ border-bottom: 1px solid #2c81d2; color: #2c81d2;}
+.ul02{ display: none;}
+.block{ display: block;}
+.ul04 li a{ display:flex; flex-wrap: wrap; border-bottom: 10px solid #eee; padding: 15px 20px 8px 20px;}
+.ul04 li:last-child{ border-bottom: none;}
+.li-left{ width: 30%;}
+.li-right{ width: 66%; padding-left: 10px; }
+.li-left img{ width: 100%;}
+.p01{ font-size: 14px; color: #323232; }
+.p02{ color: #7f7f7f; font-size: 12px; overflow: hidden; text-overflow: ellipsis;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3; }
+.li-ht{ line-height: 35px;}
+.img01{ width: 100%;}
+.li01{ border-bottom:none!important; padding: 20px 0px 0px 12px!important;}
+.li01 a{ width: 28%; text-align: center; padding: 0px 7px;}
+.ul03{ display: none; padding: 20px 10px 0 10px;}
+.ul03 li{display: flex; flex-wrap:wrap; }
+.ul03 li a{ width: 29%; text-align: center; padding: 0 7px;}

@@ -1,0 +1,17 @@
+/*头部*/
+header{ background-color: #373737; height: 60px; display: flex; justify-content: flex-start; line-height: 60px;}
+header a{ width: 20%;}
+.left img{ margin: 17px  0 0 9px; width: 23px;height: 23px;}
+.center{ font-size: 18px; color: #fff; width: 60%; text-align: center;}
+
+/*主要内容*/
+.ul01 li{ line-height: 40px; padding-left: 10px; display: flex; flex-wrap: wrap;}
+.ul01 li span:nth-child(1){ width: 40%; color: #919191;}
+.ul01 li span:nth-child(2){ width: 60%; color: #5a5a5a;}
+.ul01 li:nth-child(12){ display: flex; flex-wrap: wrap; padding-left:0px;}
+.ul01 li div{ width: 33.3%; text-align: center;}
+.ul01 li:nth-child(13){ height: 10px; background-color: #f8f8f8;}
+.ul01 img{
+	width: 6rem;
+	height: 4rem;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/collect.css" />
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+		<title>我的收藏</title>
+	</head>
+	<body>
+<header>
+	<a class="left" onclick="javascript:history.back(-1);"><img src="img/return.png"/></a>
+	<p class="center">我的收藏</p>
+</header>
+<section>
+	<ul class="ul01">
+		<li><span class="active">石材企业</span></li>
+		<li><span>石材产品</span></li>
+		<li><span>石材矿山</span></li>
+	</ul>			
+	<ul class="ul02 block ul04">
+		<li>
+			<a href="business.html">
+			<div class="li-left"><img src="img/co1.png"/></div>
+			<div class="li-right">
+				<p class="p01 li-ht">天玺石材有限公司</p>
+				<p class="p02 li-ht">电话：15842411546</p>
+				<p class="p02 li-ht">地址：云浮市云安县河口三街5号</p>
+			</div>
+			</a>
+		</li>
+		<li>
+			<a href="business.html">
+			<div class="li-left"><img src="img/co2.png"/></div>
+			<div class="li-right">
+				<p class="p01 li-ht">长寿县东盈石材厂</p>
+				<p class="p02 li-ht">电话：15842411546</p>
+				<p class="p02 li-ht">地址：长寿县下东街北区路144号</p>
+			</div>
+			</a>
+		</li>
+		<li>
+			<a href="business.html">
+			<div class="li-left"><img src="img/co3.png"/></div>
+			<div class="li-right">
+				<p class="p01 li-ht">长城国际石材有限公司</p>
+				<p class="p02 li-ht">电话：15842411546</p>
+				<p class="p02 li-ht">地址：长寿县下东街北区路144号</p>
+			</div>
+			</a>
+		</li>				
+	</ul>
+	<ul class="ul02 ul03">
+		<li>
+			<a href="prodetail.html">
+			<img src="img/collect1.jpg" class="img01"/>
+			<p>吉林青</p>
+			</a>
+			<a href="prodetail.html">
+			<img src="img/collect2.jpg" class="img01"/>
+			<p>梨花白</p>
+			</a>
+			<a href="prodetail.html">
+			<img src="img/collect3.jpg" class="img01"/>
+			<p>奧特曼</p>
+			</a>
+			<a href="prodetail.html">
+			<img src="img/collect4.jpg" class="img01"/>
+			<p>吉林青</p>
+			</a>
+			<a href="prodetail.html">
+			<img src="img/collect5.jpg" class="img01"/>
+			<p>奧特曼</p>
+			</a>
+			<a href="prodetail.html">
+			<img src="img/collect6.jpg" class="img01"/>
+			<p>奧特曼</p>
+			</a>
+		</li>		
+	</ul>
+	<ul class="ul02 ul04">
+		<li>
+			<a href="proddetail.html">
+			<div class="li-left"><img src="img/zang1.jpg"/></div>
+			<div class="li-right">
+				<p class="p01">富产金秋矿山</p>
+				<p class="p02">公司被认定为国家生态建材示范企业、国家“十一五”两化工业化和信息化）融合典范企业、中国生态建材标准化先进企业、广东省清洁生产企业...</p>
+			</div>
+			</a>
+		</li>
+		<li>
+			<a href="proddetail.html">
+			<div class="li-left"><img src="img/zang2.jpg"/></div>
+			<div class="li-right">
+				<p class="p01">县宏长鸣矿</p>
+				<p class="p02">公司被认定为国家生态建材示范企业、国家“十一五”两化工业化和信息化）融合典范企业、中国生态建材标准化先进企业、广东省清洁生产企业...</p>
+			</div>
+			</a>
+		</li>
+		<li>
+			<a href="proddetail.html">
+			<div class="li-left"><img src="img/zang3.jpg"/></div>
+			<div class="li-right">
+				<p class="p01">小北的矿山</p>
+				<p class="p02">公司被认定为国家生态建材示范企业、国家“十一五”两化工业化和信息化）融合典范企业、中国生态建材标准化先进企业、广东省清洁生产企业...</p>
+			</div>
+			</a>
+		</li>
+		<li>
+			<a href="proddetail.html">
+			<div class="li-left"><img src="img/zang4.jpg"/></div>
+			<div class="li-right">
+				<p class="p01">黄锈石主产园</p>
+				<p class="p02">公司被认定为国家生态建材示范企业、国家“十一五”两化工业化和信息化）融合典范企业、中国生态建材标准化先进企业、广东省清洁生产企业...</p>
+			</div>
+			</a>
+		</li>
+	</ul>
+</section>
+<script>
+$(function() {
+$('.ul01 li').on('click',function(){
+	$(this).find('span').addClass('active');
+	$(this).siblings().find('span').removeClass('active');
+	$('.ul02').css('display', 'none');
+	$('.ul02').eq($(this).index()).css('display', 'block');
+	})
+})
+</script>
+</body>
+</html>

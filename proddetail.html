@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/mui.min.css" />
+    	<link rel="stylesheet" href="./css/part/share.min.css">
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/proddetail.css" />
+		<link rel="stylesheet" href="css/cloak.css" />
+		<title>天天石材展-矿山详情</title>
+		<script type="text/javascript" src="js/mui.min.js" ></script>
+		<script type="text/javascript" src="js/part/mui.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/page/proddetail.js"></script>
+		<!--//分享JS-->
+		<script src="./layer_mobile/layer.js"></script>
+		<script src="js/share.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/part/social-share.min.js"></script>
+	</head>
+	<body>
+		
+
+<div id="slider" class="mui-slider" >
+	  <div class="mui-slider-group mui-slider-loop iimg">
+	    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+	    <div class="mui-slider-item mui-slider-item-duplicate">
+	      <a href="#">
+	        <img src="img/tian1.png">
+	      </a>
+	    </div>
+	    <!-- 第一张 -->
+	    <div class="mui-slider-item">
+	      <a href="#">
+	        <img src="img/tian1.png">
+	      </a>
+	    </div>
+	    <!-- 第二张 -->
+	    <div class="mui-slider-item">
+	      <a href="#">
+	        <img src="img/tian2.png">
+	      </a>
+	    </div>
+	    <!-- 第三张 -->
+	    <div class="mui-slider-item">
+	      <a href="#">
+	        <img src="img/tian3.png">
+	      </a>
+	    </div>
+	    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+	    <div class="mui-slider-item mui-slider-item-duplicate">
+	      <a href="#">
+	        <img src="img/tian1.png">
+	      </a>
+	    </div>
+	  </div>
+	  <div class="mui-slider-indicator">
+	    <div class="mui-indicator mui-active"></div>
+	    <div class="mui-indicator"></div>
+	    <div class="mui-indicator"></div>
+	  </div>
+	  <div>
+	  <p class="lun-p" id="myadd">
+	  	<a class="return" onclick="mui.back()"><img src="img/return.png" /></a>
+	  	<a class="fen" onclick="do_share();"><img src="img/fen.png"/></a>
+	  	<a class="zang" @click="collection"><img v-show="num == 0" src="img/zang.png"/><img v-show="num == 1" src="./img/common/collection1.png"/></a>
+	  </p>
+	  <div class="bg_tis">
+			<div>
+				<p>错误！请重试!</p>
+			</div>
+		</div>
+	  </div>
+	  <div id="share_box" >
+			<div class=".share_null"></div>
+		    <div class="social-share" data-initialized="true" style="text-align: center;" data-url="http://192.168.0.149:8020/shicai/business.html#"  data-title="某个石材公司">
+		        <a href="#" class="social-share-icon icon-weibo"></a>
+		        <a onclick="shareHref()" class="social-share-icon icon-wechat"></a>
+		        <a href="#" class="social-share-icon icon-qq"></a>
+		        <a href="#" class="social-share-icon icon-qzone"></a>
+		    </div>
+			<div class=".share_null"></div>
+			<div style="display: none;">
+				<textarea id="sharecontent" rows="3">我正在使用APP，赶紧跟我一起来体验！</textarea>
+				<input id="sharehref" class="sharehref" type="url" value="" placeholder="请输入要分享的链接地址" />
+				<input id="sharehrefTitle" class="sharehref" type="text" value="最好的APP" placeholder="请输入要分享的链接标题" />
+				<input id="sharehrefDes" class="sharehref" type="text" value="我正在使用APP，赶紧跟我一起来体验！" placeholder="请输入要分享的链接描述" />
+			</div>
+		</div>
+		<div class="share_bg" onclick="no_share();"></div>
+	</div>
+<div id="proddetail" v-cloak>
+<div class="img_look"  onclick="img_show(0)">
+	<img src="img/tian1.png" alt="" />
+</div>
+<ul class="ul01">
+	<li class="li-01">{{proList.msfoName}}</li>
+	<!--缩写-->
+	<li class="li-02" v-show="show != 0">
+		{{suo}}.....<span @click="all">全文</span>
+	</li>
+	<!--全文-->
+	<li class="li-02" v-show="show == 0">
+		{{proList.msfoContent}}<span @click="all">收起</span>
+	</li>
+</ul>
+<div class="bg"></div>
+<ul class="ul02">
+	<li><span>产地：</span><span>{{prList.msfeOrigin}}</span></li>
+	<li @click="tel"><span>联系电话：</span><span>{{prList.msfePhone}}</span></li>	
+</ul>
+<div class="bg"></div>
+<ul class="ul02">
+	<li><span>出产产品：</span><span>{{proList.msfoProduct}}</span></li>
+	<li><span>特色：</span><span>{{proList.msfoFeature}}</span></li>
+	<li><span>附近港口：</span><span>{{prList.msfePorts}}</span></li>
+	<li><span>运输条件：</span><span>{{prList.msfeTransport}}</span></li>
+</ul>
+<div class="content">
+<p class="p01"><span><img src="img/bg.jpg">推荐企业</span><a onclick="checkPhone()">更多</a></p>
+<ul class="ul03">
+	<li v-for="(list,index) in comList.stores" v-if="index<=2" @click="enterprise(list.mstoId)">
+		<div class="div-left"><img :src=url+list.mstoImage  class="img01"/></div>
+		<div class="div-right">
+			<p class="p02">{{list.mstoName}}</p>
+			<p class="p03" >电话：{{list.mstoPhone}}</p>
+			<p class="p03">地址：{{list.mstoAddress}}</p>
+		</div>
+	</li>
+	<!--<li>
+		<div class="div-left"><img src="img/co2.png"/></div>
+		<div class="div-right">
+			<p class="p02">长寿县东盈石材厂</p>
+			<p class="p03">电话：15842411546</p>
+			<p class="p03">地址：长寿县下东街北区路144号</p>
+		</div>
+	</li>
+	<li>
+	<div class="div-left"><img src="img/co3.png"/></div>
+		<div class="div-right">
+			<p class="p02">长城国际石材有限公司</p>
+			<p class="p03">电话：15842411546</p>
+			<p class="p03">地址：长寿县下东街北区路144号</p>
+		</div>
+	</li>-->
+</ul>
+</div>
+
+
+</div>
+
+<script type="text/javascript">
+//获得slider插件对象
+var gallery = mui('.mui-slider');
+$('#sharehref').val('http://192.168.0.149:8020/zhongpan2/index.html');
+gallery.slider({
+  interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+});
+</script>
+<script>
+	var do_share = function(){
+		$('.share_bg').show();
+		$('#share_box').show();
+	}
+	var no_share = function(){
+		$('.share_bg').hide();
+		$('#share_box').hide();
+	}
+	var img_show = function(index){
+		if(index == 0){
+			$('.img_look').css('display','none')
+		}else{
+			$('.img_look').css('display','block')
+			var url = $('.mui-slider .mui-slider-group div:eq('+(index*1-1)+') img').attr('src')
+			$('.img_look img').attr('src',url)
+			console.log(index)
+		}
+	}
+	
+	function checkPhone(){
+		var h=plus.webview.getLaunchWebview().getURL(); 		
+		plus.webview.getLaunchWebview().evalJS('showStreet()');
+	}
+    
+</script>
+</body>
+</html>

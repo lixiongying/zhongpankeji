@@ -1,0 +1,92 @@
+ <!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>石材一条街</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<link href="css/part/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/part/common.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/part/stone street.css"/>
+		<link rel="stylesheet" type="text/css" href="css/cloak.css"/>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="./js/part/stone street.js"></script>
+		<script type="text/javascript" src="js/part/vue.js"></script>
+		<script type="text/javascript" src="js/mui.min.js"></script>
+	</head>
+
+	<body>
+		<div id="myadd" v-cloak>
+		<header>
+			<div class="header_top">
+				<div class="header_top_sou">
+					<div> 
+						<i></i>
+						<input placeholder="输入关键词"></inptu>
+					</div>
+				</div>
+				<div class="top">
+					<img src="./img/stone street/top.svg" alt="" />
+				</div>
+			</div>
+		</header>
+		<main class="main_all">
+			<div class="main" v-for="(x,index) in Arr" :id="Arr[index].mstoId"  @click="go(Arr[index].mstoId)">
+				<div class="main_top">
+					<div class="main_top_left">
+					<img :src=url+Arr[index].mstoImage alt="" />
+					</div>
+					<div class="main_top_right">
+						<p><a>{{Arr[index].mstoName}}</a></p>
+						<p>{{Arr[index].mstoPhone}}</p>
+						<p>{{Arr[index].mstoAddress}}</p>
+					</div>
+				</div>
+				<div class="main_bottom">
+					<div class="main_bottom_top">
+						<p>{{mstoContent[index]}}</p>
+					</div>
+					<div class="main_bottom_bottom">
+						<span id="iimg">{{img}}</span>
+						<img :src=url+img_Arr[index][0] alt="" />
+						<img :src=url+img_Arr[index][1] alt="" />
+						<img :src=url+img_Arr[index][2] alt="" />
+					</div>
+				</div>
+			</div>
+		</main>
+		<!--<footer>
+			<div class="footer">
+				<ul class="footer-ul">
+					<li>
+						<a href="index.html">
+							<img src="img/fot1.png" class="fot-img"/>
+							<p>首页</p>
+						</a>
+					</li>
+					<li>
+						<a href="stone_street.html">
+							<img src="img/fot2-2.png" class="fot-img"/>
+							<p class="onclick">石材一条街</p>
+						</a>
+					</li>
+					<li>
+						<a href="sand_table.html">
+							<img src="img/fot3.png" class="fot-img"/>
+							<p>电子沙盘</p>
+						</a>
+					</li>
+					<li>
+						<a href="my_page.html">
+							<img src="img/fot4.png" class="fot-img"/>
+							<p>我的</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</footer>-->
+		</div>
+	</body>
+</html>

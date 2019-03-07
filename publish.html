@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/publish.css" />
+		<link rel="stylesheet" href="css/cloak.css" />
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+		<script type="text/javascript" src="js/page/publish.js" ></script>
+		<script src="js/part/vue.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<title>发布清货信息</title>
+	</head>
+	<body>
+<div id="myadd" v-cloak>
+<header>
+	<a class="left" @click="out"><img src="img/return1.png"/></a>
+	<p class="center">发布清货信息</p>
+</header>
+<div class="bg_tis" v-show="err == 1">
+	<div>
+		<p>无信息!</p>
+	</div>
+</div>
+<section>
+	<form>
+		<ul class="ul01">
+			<li @click="fen"><span class="span-font">选择石材</span><a class="href-a">{{name}}<em class="href-em"></em></a></li>
+			<li class="fen" v-show="show_fen == 1">
+				<p v-for="(x,index) in mgooId" :id="mgooId[index]" class="p-font" @click="cha(mgooId[index],index)">{{mgooName[index]}}</p>
+			</li>
+			<li class="bg" @click="bg" v-show="show_fen == 1"></li>
+			<li class="li02">
+				<span class="sp-left">清货价格：</span>
+				<input type="text" placeholder="2.24" class="input1"/ v-model="mgooMinimumPrice">-<input type="text" placeholder="2.24" class="input1" v-model="mgooMaximumPrice" /><span>元/㎡</span>
+			</li>
+			<li class="li03">
+				<span class="sp-left">石材尺寸：</span>
+				<input type="text" placeholder="221" class="input1"/>x
+				<input type="text" placeholder="224" class="input1"/>x
+				<input type="text" placeholder="224" class="input1" v-model="mgooMaxThickness"/><span>mm</span>
+			</li>
+			<li class="li04">
+				<span class="sp-left">清货详情：</span>
+				<p><textarea tyle="OVERFLOW:   hidden" placeholder="请输入清货详情" class="input1" v-model="mgooClearExplain"/></textarea></p>
+			</li>
+			<li class="li05">
+				<p @click="init_two">提 交</p>
+			</li>
+		</ul>		
+	</form>	
+</section>
+</div>
+</body>
+</html>

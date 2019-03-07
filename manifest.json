@@ -1,0 +1,688 @@
+{
+    "@platforms": ["android", "iPhone", "iPad"],
+    "id": "H51375504",/*应用的标识，创建应用时自动生成，勿手动修改*/
+    "name": "zhongpan",/*应用名称，程序桌面图标名称*/
+    "version": {
+        "name": "1.0",/*应用版本名称*/
+        "code": ""
+    },
+    "description": "",/*应用描述信息*/
+    "icons": {
+        "72": "icon.png"
+    },
+    "launch_path": "index1.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+    "developer": {
+        "name": "",/*开发者名称*/
+        "email": "",/*开发者邮箱地址*/
+        "url": ""/*开发者个人主页地址*/
+    },
+    "permissions": {
+        "Messaging":{
+        	"description": "短彩邮件插件"
+        },
+        "Cache": {
+            "description": "管理应用缓存"
+        },
+        "Console": {
+            "description": "跟踪调试输出日志"
+        },
+        "Contacts": {
+            "description": "访问系统联系人信息"
+        },
+        "Events": {
+            "description": "应用扩展事件"
+        },
+        "Maps": {
+            "description": "管理地图插件"
+        },
+        "Speech": {
+            "description": "管理语音识别插件"
+        },
+        "Share":{
+        	"description": "管理社交分享插件"
+        },"OAuth":{
+        	
+        }
+    },
+    "plus": {
+        "splashscreen": {
+            "autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+            "waiting": true/*是否在程序启动界面显示等待雪花，true表示显示，false表示不显示。*/
+        },
+        "popGesture": "close",/*设置应用默认侧滑返回关闭Webview窗口，"none"为无侧滑返回功能，"hide"为侧滑隐藏Webview窗口。参考http://ask.dcloud.net.cn/article/102*/
+        "runmode": "normal",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+        "signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
+        "distribute": {
+        	"plugins":{
+        	    "share":{
+        		    "weixin":{
+	        		   "appid":"wx4de7c5d9bddeb480",
+	        		   "appsecret":"c4072f82582670e9ac23842f488804c1",
+	        		   "description":"可选，微信分享"
+	        		}
+        		}
+        	},
+            "apple": {
+                "appid": "",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+                "mobileprovision": "",/*iOS应用打包配置文件*/
+                "password": "",/*iOS应用打包个人证书导入密码*/
+                "p12": "",/*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+                "devices": "universal",/*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+                "frameworks":[
+                ]/*调用Native.js调用原生Objective-c API需要引用的FrameWork，如需调用GameCenter，则添加"GameKit.framework"*/
+            },
+            "google": {
+                "packagename": "",/*Android应用包名，如io.dcloud.HelloH5*/
+                "keystore": "",/*Android应用打包使用的密钥库文件*/
+                "password": "",/*Android应用打包使用密钥库中证书的密码*/
+                "aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
+               "permissions": ["<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>","<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"]
+				/*使用Native.js调用原生安卓API需要使用到的系统权限*/
+            },
+            "orientation": [
+                "portrait-primary"
+            ],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+            "icons": {
+                "ios": {
+                    "prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
+                     /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+                    "iphone": {
+                        "normal": "", /*iPhone3/3GS程序图标，分辨率：57x57*/
+                        "retina": "", /*iPhone4程序图标，分辨率：114x114*/
+                         /*iPhone4S/5/6程序图标，分辨率：120x120*/
+			 /*iPhone6 Plus程序图标，分辨率：180x180*/
+                        "spotlight-normal": "", /*iPhone3/3GS Spotlight搜索程序图标，分辨率：29x29*/
+                        "spotlight-retina": "", /*iPhone4 Spotlight搜索程序图标，分辨率：58x58*/
+                         /*iPhone4S/5/6 Spotlight搜索程序图标，分辨率：80x80*/
+                        "settings-normal": "", /*iPhone4设置页面程序图标，分辨率：29x29*/
+                         /*iPhone4S/5/6设置页面程序图标，分辨率：58x58*/
+			"app@2x":"unpackage/res/icons/120x120.png","app@3x":"unpackage/res/icons/180x180.png","settings@3x":"unpackage/res/icons/87x87.png","settings@2x":"unpackage/res/icons/58x58.png","spotlight@2x":"unpackage/res/icons/80x80.png","spotlight@3x":"unpackage/res/icons/120x120.png","notification@3x":"unpackage/res/icons/60x60.png","notification@2x":"unpackage/res/icons/40x40.png" /*iPhone6Plus设置页面程序图标，分辨率：87x87*/
+                    },
+                    "ipad": {
+                        "normal": "", /*iPad普通屏幕程序图标，分辨率：72x72*/
+                        "retina": "", /*iPad高分屏程序图标，分辨率：144x144*/
+                         /*iPad iOS7程序图标，分辨率：76x76*/
+                         /*iPad iOS7高分屏程序图标，分辨率：152x152*/
+                        "spotlight-normal": "", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+                        "spotlight-retina": "", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+                        /*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
+                        /*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+                        /*iPad设置页面程序图标，分辨率：29x29*/
+                        "app":"unpackage/res/icons/76x76.png","app@2x":"unpackage/res/icons/152x152.png","settings":"unpackage/res/icons/29x29.png","proapp@2x":"unpackage/res/icons/167x167.png","spotlight":"unpackage/res/icons/40x40.png","settings@2x":"unpackage/res/icons/58x58.png","spotlight@2x":"unpackage/res/icons/80x80.png","notification":"unpackage/res/icons/20x20.png","notification@2x":"unpackage/res/icons/40x40.png" /*iPad高分屏设置页面程序图标，分辨率：58x58*/
+                    },"appstore":"unpackage/res/icons/1024x1024.png"
+                },
+                "android": {
+                    "mdpi": "unpackage/res/icons/48x48.png", /*普通屏程序图标，分辨率：48x48*/
+                    "ldpi": "unpackage/res/icons/48x48.png", /*大屏程序图标，分辨率：48x48*/
+                    "hdpi": "unpackage/res/icons/72x72.png", /*高分屏程序图标，分辨率：72x72*/
+                    "xhdpi": "unpackage/res/icons/96x96.png",/*720P高分屏程序图标，分辨率：96x96*/
+                    "xxhdpi": "unpackage/res/icons/144x144.png","xxxhdpi":"unpackage/res/icons/192x192.png"/*1080P 高分屏程序图标，分辨率：144x144*/
+                }
+            },
+            "splashscreen": {
+                "ios": {
+                    "iphone": {
+                        "default": "", /*iPhone3启动图片选，分辨率：320x480*/
+                        "retina35": "",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+                        "retina40": "",/*4.0 英寸设备(iPhone5/iPhone5s)启动图片，分辨率：640x1136*/
+                        "retina47": "",/*4.7 英寸设备(iPhone6)启动图片，分辨率：750x1334*/
+                        "retina55": "",/*5.5 英寸设备(iPhone6 Plus)启动图片，分辨率：1242x2208*/
+                        "retina55l": ""/*5.5 英寸设备(iPhone6 Plus)横屏启动图片，分辨率：2208x1242*/
+                    },
+                    "ipad": {
+                        "portrait": "", /*iPad竖屏启动图片，分辨率：768x1004*/
+                        "portrait-retina": "",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+                        "landscape": "", /*iPad横屏启动图片，分辨率：1024x748*/
+                        "landscape-retina": "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+                        "portrait7": "", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+                        "portrait-retina7": "",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+                        "landscape7": "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+                        "landscape-retina7": ""/*iPad iOS7高分屏横屏启动图片，分辨率：2048x1536*/
+                    }
+                },
+                "android": {
+                    "mdpi": "", /*普通屏启动图片，分辨率：240x282*/
+                    "ldpi": ""/*1080P高分屏启动图片，分辨率：1080x1882*/
+                }
+            }
+        },"adid":"127090160507"
+    },
+	"dependencies": {
+		"pages": {
+			"index1.html": {
+				"resources": [
+					"index.html"
+				],
+				"refer": [
+					"sand_table.html",
+					"stone_street.html",
+					"my_page.html"
+				],
+				"priority": 0
+			},
+			"my_page.html": {
+				"resources": [],
+				"refer": [
+					"levelrun.html",
+					"hezuoclient.html",
+					"information.html",
+					"login.html",
+					"setting.html",
+					"new_login.html",
+					"product.html",
+					"collect.html",
+					"import.html"
+				],
+				"priority": 0
+			},
+			"hezuoclient.html": {
+				"resources": [],
+				"refer": [
+					"clientdetail.html"
+				],
+				"priority": 0
+			},
+			"login.html": {
+				"resources": [],
+				"refer": [
+					"my_page.html"
+				],
+				"priority": 0
+			},
+			"setting.html": {
+				"resources": [],
+				"refer": [
+					"new_login.html"
+				],
+				"priority": 0
+			},
+			"index.html": {
+				"resources": [],
+				"refer": [
+					"business.html"
+				],
+				"priority": 0
+			},
+			"import.html": {
+				"resources": [],
+				"refer": [
+					"my_page.html"
+				],
+				"priority": 0
+			},
+			"levelrun.html": {
+				"resources": [],
+				"refer": [
+					"addbusiness.html"
+				],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"img/common/out (1).png",
+				"img/sand_table/coordinate3.png",
+				"css/setting--.css",
+				"img/encyclopedias/dl1.png",
+				"img/common/bottom/shop1.png",
+				"img/completed/1.png",
+				"js/session.js",
+				"js/cetification.js",
+				"product_add.html",
+				"css/newde--.css",
+				"img/product/radius3.png",
+				"img/common/collection0.png",
+				"img/test/j1444811715842.png",
+				"img/prod2.jpg",
+				"js/mui.previewimage.js",
+				"img/business/aa.png",
+				"img/my_page/hezoukehu.png",
+				"img/fot1-1.png",
+				"img/co1.png",
+				"img/encyclopedias/radius4.png",
+				"js/part/information.js",
+				"recommend--.html",
+				"publish.html",
+				"img/login_x.png",
+				"img/zheng3.png",
+				"img/sand_table/coordinate0.png",
+				"about--.html",
+				"img/encyclopedias/sou.png",
+				"img/pro6.jpg",
+				"js/page/newdetail.js",
+				"img/my_page/enterprise.png",
+				"img/lian2.png",
+				"img/information/dl2.png",
+				"img/fot1.png",
+				"js/page/index.js",
+				"img/qing1.png",
+				"js/part/common.js",
+				"img/aa.png",
+				"img/information/go.png",
+				"img/product/dl12.png",
+				"register.html",
+				"proddetail.html",
+				"help.html",
+				"img/my_page/imported.png",
+				"css/part/stone street.css",
+				"js/page/proddetail.js",
+				"img/product/radius6.png",
+				"js/page/new.js",
+				"img/common/out_h.png",
+				"css/parter/levelrun.css",
+				"js/part/sand_table---.js",
+				"img/encyclopedias/dl5.png",
+				"img/encyclopedias/dl11.png",
+				"img/business/purge1.png",
+				"ocean_shipping.html",
+				"css/publish.css",
+				"img/information/girl.png",
+				"css/parter/clientdetail.less",
+				"css/stone.css",
+				"img/icon1.jpg",
+				"img/tian3.png",
+				"img/my_page/no.png",
+				"img/stone street/product4.png",
+				"img/business/share.png",
+				"telelogin.html",
+				"img/jian5.png",
+				"img/product/radius7.png",
+				"my_page_aut.html",
+				"js/ajaxfileupload.js",
+				"img/business/lunbo4.png",
+				"js/mui.zoom.js",
+				"css/parter/addbusiness.less",
+				"css/product_add.css",
+				"css/part/settlement.css",
+				"css/register.css",
+				"css/exportdetail.css",
+				"css/new.css",
+				"img/my_page/purge3.png",
+				"css/newdetail--.css",
+				"img/index-qing2.png",
+				"img/product/dl5.png",
+				"img/fen4.png",
+				"img/fot2-2.png",
+				"img/common/add.png",
+				"img/bg.jpg",
+				"css/part/common.css",
+				"img/encyclopedias/dl7.png",
+				"js/jquery-1.8.3.min.js",
+				"img/encyclopedias/radius2.png",
+				"img/shang.png",
+				"js/page/index--.js",
+				"img/pro2.jpg",
+				"newde--.html",
+				"img/business/out.png",
+				"img/fen5.png",
+				"img/xin3.png",
+				"css/new---.css",
+				"css/part/business.css",
+				"img/del.png",
+				"img/business/product1.png",
+				"js/part/stone street--.js",
+				"new--.html",
+				"img/supply/3.png",
+				"css/collect--.css",
+				"img/xin1.png",
+				"img/qing3.png",
+				"js/new_login.js",
+				"js/part/supply.js",
+				"img/stone street/enterprise2.png",
+				"check.html",
+				"js/login.js",
+				"css/part/check.css",
+				"css/part/supply.css",
+				"img/common/bottom/shop2.png",
+				"img/zang.png",
+				"js/page/goods.js",
+				"img/completed/shou.png",
+				"js/part/mui.min.js",
+				"index--.html",
+				"myname.html",
+				"css/part/share.min.css",
+				"js/page/import.js",
+				"img/login2----.jpg",
+				"img/sand_table/top.png",
+				"js/page/commodit.js",
+				"css/hezouclient.css",
+				"img/jian4.png",
+				"img/add.png",
+				"img/common/bottom/my2.png",
+				"img/login1.png",
+				"barge.html",
+				"css/part/ocean shipping.css",
+				"css/export1.css",
+				"img/product/dl6.png",
+				"img/login3.png",
+				"js/page/telelogin.js",
+				"img/product/bottom.png",
+				"img/qing6.png",
+				"img/encyclopedias/333.png",
+				"css/fonts/mui.ttf",
+				"img/product/out.png",
+				"img/return1.png",
+				"img/zang3.jpg",
+				"img/stone street/product2.png",
+				"settlement.html",
+				"js/share.js",
+				"css/export.css",
+				"img/pro4.jpg",
+				"js/page/product.js",
+				"img/my_page/head.png",
+				"img/my_page/star.png",
+				"img/completed/3.png",
+				"js/part/port.js",
+				"completed.html",
+				"img/my_page/daihezoukehu.png",
+				"img/product/radius4.png",
+				"img/common/bottom/home2.png",
+				"img/my_page/guanli.png",
+				"css/mui.min.css",
+				"img/common/bottom/home1.png",
+				"encyclopedias.html",
+				"js/page/help.js",
+				"img/business/lunbo5.png",
+				"img/encyclopedias/top.png",
+				"img/prod1.jpg",
+				"img/my_page/yes.png",
+				"css/start.css",
+				"img/encyclopedias/dl12.png",
+				"img/zai.png",
+				"css/part/information.css",
+				"img/common/share.png",
+				"css/fonts/iconfont.eot",
+				"img/bg.png",
+				"js/page/collect.js",
+				"js/main.js",
+				"img/icon2.jpg",
+				"js/part/stone street.js",
+				"js/part/vue.js",
+				"img/common/out_w.png",
+				"img/product/dl3.png",
+				"img/fot3-3.png",
+				"js/page/export.js",
+				"js/part/business--.js",
+				"img/stone street/enterprise1.png",
+				"img/business/lunbo3.png",
+				"img/sand_table/coordinate5.png",
+				"img/encyclopedias/radius7.png",
+				"start.html",
+				"supply.html",
+				"js/page/newde.js",
+				"product--.html",
+				"css/stone--.css",
+				"js/part/md5.js",
+				"css/cetification.css",
+				"img/common/sou.png",
+				"img/my_page/hotel.png",
+				"img/jian6.png",
+				"css/import.css",
+				"css/parter/addbusiness.css",
+				"goods.html",
+				"img/my_page/exit.png",
+				"img/about_01.jpg",
+				"exportdetail.html",
+				"css/help.css",
+				"css/recommend--.css",
+				"stone.html",
+				"js/part/business.js",
+				"img/my_page/sou.png",
+				"css/clientdetail.css",
+				"img/zheng6.png",
+				"img/common/bottom/map1.png",
+				"js/part/my_page.js",
+				"img/pro1.jpg",
+				"img/business/purge2.png",
+				"img/common/bottom/my1.png",
+				"css/reset.css",
+				"collect--.html",
+				"img/information/position.png",
+				"css/product.css",
+				"img/encyclopedias/dl8.png",
+				"css/part/mui.min.css",
+				"img/qing5.png",
+				"img/encyclopedias/out.png",
+				"img/business/collection.png",
+				"css/nav_table.css",
+				"img/prod4.jpg",
+				"css/part/port.css",
+				"css/import11.css",
+				"prodetail.html",
+				"css/setting.css",
+				"css/commodit.css",
+				"img/stone street/product3.png",
+				"img/information/shangpinxiangqing_quxiao.png",
+				"img/common/collection1.png",
+				"js/part/settlement.js",
+				"js/part/check.js",
+				"js/part/jquery.share.min.js",
+				"img/set.png",
+				"img/common/trash.png",
+				"img/jian2.png",
+				"img/fot4.png",
+				"img/fen2.png",
+				"css/part/my_page_login.css",
+				"img/stone street/product6.png",
+				"img/collect1.jpg",
+				"img/encyclopedias/radius6.png",
+				"img/sou.png",
+				"img/my_page/information.png",
+				"img/information/preservation.png",
+				"img/icon3.jpg",
+				"img/product/top.png",
+				"good.html",
+				"img/information/upload.png",
+				"css/common.css",
+				"css/parter/levelrun.less",
+				"img/encyclopedias/dl10.png",
+				"about.html",
+				"img/index-qing1.png",
+				"css/part/completed.css",
+				"img/inbg.jpg",
+				"js/mui.indexedlist.js",
+				"img/product/dl11.png",
+				"js/page/contact.js",
+				"img/business/phone.png",
+				"newdetail--.html",
+				"css/login.css",
+				"img/ul-bg.jpg",
+				"img/co2.png",
+				"css/mui.indexedlist.css",
+				"img/information/out.png",
+				"img/xin6.png",
+				"img/fen1.png",
+				"css/about--.css",
+				"js/page/recommend.js",
+				"img/common/order_no.jpg",
+				"cetification.html",
+				"img/fot2.png",
+				"img/case3.png",
+				"img/business/lunbo1.png",
+				"img/icon4.png",
+				"img/case2.png",
+				"css/fonts/iconfont.ttf",
+				"img/information/man.png",
+				"img/yu.png",
+				"img/my_page/portrait.png",
+				"img/index-qing4.png",
+				"img/my_page/top.png",
+				"js/mui.pullToRefresh.material.js",
+				"img/xin2.png",
+				"img/product/dl2.png",
+				"img/trash.png",
+				"stone---.html",
+				"img/sand_table/coordinate2.png",
+				"img/index-qing3.png",
+				"js/rem.js",
+				"img/product/radius2.png",
+				"img/business/location.png",
+				"img/fen3.png",
+				"img/encyclopedias/dl9.png",
+				"css/newdetail.css",
+				"js/part/completed.js",
+				"css/about.css",
+				"css/part/barge.css",
+				"img/completed/2.png",
+				"img/fen.png",
+				"img/tian2.png",
+				"img/zheng5.png",
+				"newde.html",
+				"img/collect5.jpg",
+				"img/xin4.png",
+				"img/ban2.png",
+				"js/part/sand_table.js",
+				"img/fen6.png",
+				"stone_street--.html",
+				"img/about_02.jpg",
+				"js/part/encyclopedias.js",
+				"stone---222.html",
+				"img/zheng1.png",
+				"img/de1.png",
+				"help--.html",
+				"img/bianji.png",
+				"export.html",
+				"img/product/dl7.png",
+				"js/part/mui.js",
+				"css/contact.css",
+				"img/zang4.jpg",
+				"css/collect.css",
+				"js/page/prodetail.js",
+				"my_page_login.html",
+				"img/zheng4.png",
+				"img/encyclopedias/dl4.png",
+				"img/down.png",
+				"css/prodetail.css",
+				"img/encyclopedias/radius1.png",
+				"js/page/index55.js",
+				"img/business/purge3.png",
+				"css/new_login.css",
+				"js/exportdetail.js",
+				"img/product/radius1.png",
+				"css/product--.css",
+				"img/qing2.png",
+				"img/supply/2.png",
+				"img/xin5.png",
+				"js/part/barge.js",
+				"newdetail.html",
+				"img/sand_table/coordinate1.png",
+				"img/common/bottom/map2.png",
+				"img/business/product4.png",
+				"img/collect2.jpg",
+				"css/goods.css",
+				"img/pic.jpg",
+				"img/lian1.png",
+				"img/qing8.png",
+				"js/register.js",
+				"img/my_page/set.png",
+				"js/part/social-share.min.js",
+				"img/ban3.png",
+				"img/product/dl9.png",
+				"commodit.html",
+				"img/collect6.jpg",
+				"css/part/sand _table.css",
+				"js/page/reset.js",
+				"js/mui.min.js",
+				"img/information/portrait.png",
+				"js/uploadImg.js",
+				"import--.html",
+				"img/product/radius5.png",
+				"img/zang2.jpg",
+				"img/fot3.png",
+				"js/mui.pullToRefresh.js",
+				"proddetail--.html",
+				"img/product/dl1.png",
+				"img/my_page/enterprise2.png",
+				"contact.html",
+				"setting---.html",
+				"img/jian1.png",
+				"img/encyclopedias/dl2.png",
+				"css/part/goods.css",
+				"img/zheng2.png",
+				"img/business/product3.png",
+				"img/sand_table/coordinate4.png",
+				"css/part/stone street--.css",
+				"css/newde.css",
+				"img/business/lunbo2.png",
+				"img/jian3.png",
+				"css/part/my_page.css",
+				"css/part/encyclopedias.css",
+				"img/login1--.jpg",
+				"css/index--.css",
+				"img/collect3.jpg",
+				"img/my_page/purge4.png",
+				"img/qing7.png",
+				"img/qing4.png",
+				"img/login2.png",
+				"js/page/publish.js",
+				"js/page/stone.js",
+				"new.html",
+				"img/add01.jpg",
+				"img/encyclopedias/radius3.png",
+				"img/product/dl4.png",
+				"css/telelogin.css",
+				"css/proddetail--.css",
+				"js/part/ocean shipping.js",
+				"img/stone street/top.svg",
+				"js/WdatePicker.js",
+				"img/icon4.jpg",
+				"img/index.jpg",
+				"img/product/dl10.png",
+				"css/proddetail.css",
+				"js/part/good.js",
+				"img/lian3.png",
+				"css/fonts/iconfont.woff",
+				"img/my_page/aircraft.png",
+				"img/stone street/product1.png",
+				"img/business/product2.png",
+				"img/co3.png",
+				"img/product/dl8.png",
+				"reset.html",
+				"img/completed/go.png",
+				"img/encyclopedias/bottom.png",
+				"img/return.png",
+				"js/part/jquery-1.11.0.js",
+				"img/supply/go.png",
+				"img/encyclopedias/dl6.png",
+				"js/page/product_add.js",
+				"img/pro3.jpg",
+				"css/parter/clientdetail.css",
+				"img/product/sou.png",
+				"css/fonts/iconfont.svg",
+				"css/index.css",
+				"js/vue.js",
+				"css/part/mui.css",
+				"img/encyclopedias/dl3.png",
+				"img/collect4.jpg",
+				"css/recommend.css",
+				"img/pro5.jpg",
+				"css/stone--111.css",
+				"img/ban1.png",
+				"img/bian.png",
+				"img/business/purge4.png",
+				"img/de.png",
+				"port.html",
+				"img/video.jpg",
+				"css/part/my_page_aut.css",
+				"img/encyclopedias/radius5.png",
+				"img/supply/1.png",
+				"img/case1 .png",
+				"layer_mobile/layer.js",
+				"img/stone street/product5.png",
+				"img/zang1.jpg",
+				"img/fot4-4.png",
+				"css/cloak.css",
+				"img/my_page/home.png",
+				"layer_mobile/need/layer.css",
+				"img/top.png",
+				"img/tian1.png",
+				"img/sand_table/sou.png",
+				"img/prod3.jpg",
+				"recommend.html",
+				"js/page/about.js",
+				"img/my_page/go.png",
+				"img/my_page/product.png"
+			]
+		}
+	}
+}

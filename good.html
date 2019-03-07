@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>货物货运信息</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/part/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/part/common.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/part/goods.css"/>
+		<link rel="stylesheet" href="./css/cloak.css" />
+		
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/part/common.js"></script>
+		<script type="text/javascript" src="js/part/good.js"></script>
+		<script type="text/javascript" src="js/part/jquery-1.11.0.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<script type="text/javascript" src="js/part/vue.js"></script>
+	</head>
+	
+
+	<body>
+		<div id="myadd" v-cloak>
+		<header>
+			<div class="header">
+				<em id="out"></em>
+				<p>货物货运信息</p>
+			</div>
+		</header>
+		<main class="list">
+			<h1 v-show="ImportTruck_show ==1">拖车信息</h1>
+			<div v-show="ImportTruck_show ==1" class="car_name">
+				<div>司机名称:</div>
+				<div>
+					<span>{{name}}</span>
+				</div>
+			</div>
+			<div v-show="ImportTruck_show ==1" class="car_num">
+				<div>车牌号码:</div>
+				<div>
+					<span>{{oiruCarNo}}</span>
+				</div>
+			</div>
+			<div v-show="ImportTruck_show ==1" class="car_position">
+				<div>车辆位置:</div>
+				<div>
+					<span>{{adress}}</span>
+				</div>
+			</div>
+			<div v-show="ImportTruck_show ==1" class="phone">
+				<div>联系电话:</div>
+				<div>
+					<span>{{oiruPhone}}</span>
+				</div>
+			</div>
+			<div v-show="ImportTruck_show ==1" class="start_time">
+				<div>送货时间:</div>
+				<div>
+					<span>{{oiruSendTimePlan}}</span>
+				</div>
+			</div>
+			<div v-show="ImportTruck_show ==1" class="selivery">
+				<div>预计送货时间:</div>
+				<div>
+					<span>{{DateTime}}</span>
+				</div>
+			</div>
+			<div v-show="ImportTruck_show ==1" class="over_time">
+				<div>到达时间:</div>
+				<div>
+					<span>{{oiruArriTime}}</span>
+				</div>
+			</div>
+			<h2>交货状态</h2>
+			<div class="state">
+				<div>交货状态:</div>
+				<div>
+					<span>{{OrderStatus}}</span>
+				</div>
+			</div>
+		</main>
+		</div>
+	</body>
+</html>

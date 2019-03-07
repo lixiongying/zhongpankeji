@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/mui.min.css" />
+    	<link rel="stylesheet" href="./css/part/share.min.css">
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/proddetail.css" />
+		<title>天天石材展-矿山详情</title>
+		<script type="text/javascript" src="js/mui.min.js" ></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<!--//分享JS-->
+		<script src="./layer_mobile/layer.js"></script>
+		<script src="./js/part/social-share.min.js"></script>
+	</head>
+	<body>
+<div id="slider" class="mui-slider" >
+	  <div class="mui-slider-group mui-slider-loop">
+	    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+	    <div class="mui-slider-item mui-slider-item-duplicate">
+	      <a href="#">
+	        <img src="img/tian1.png">
+	      </a>
+	    </div>
+	    <!-- 第一张 -->
+	    <div class="mui-slider-item">
+	      <a href="#">
+	        <img src="img/tian1.png">
+	      </a>
+	    </div>
+	    <!-- 第二张 -->
+	    <div class="mui-slider-item">
+	      <a href="#">
+	        <img src="img/tian2.png">
+	      </a>
+	    </div>
+	    <!-- 第三张 -->
+	    <div class="mui-slider-item">
+	      <a href="#">
+	        <img src="img/tian3.png">
+	      </a>
+	    </div>
+	    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+	    <div class="mui-slider-item mui-slider-item-duplicate">
+	      <a href="#">
+	        <img src="img/tian1.png">
+	      </a>
+	    </div>
+	  </div>
+	  <div class="mui-slider-indicator">
+	    <div class="mui-indicator mui-active"></div>
+	    <div class="mui-indicator"></div>
+	    <div class="mui-indicator"></div>
+	  </div>
+	  <p class="lun-p">
+	  	<a class="return" onclick="javascript:history.back(-1);"><img src="img/return.png"/></a>
+	  	<a class="fen" onclick="do_share();"><img src="img/fen.png"/></a>
+	  	<a href="#" class="zang"><img src="img/zang.png"/></a>
+	  </p>
+	  <div id="share_box" >
+			<div class=".share_null"></div>
+		    <div class="social-share" data-initialized="true" style="text-align: center;" data-url="http://192.168.0.149:8020/shicai/business.html#"  data-title="某个石材公司">
+		        <a href="#" class="social-share-icon icon-weibo"></a>
+		        <a href="#" class="social-share-icon icon-wechat"></a>
+		        <a href="#" class="social-share-icon icon-qq"></a>
+		        <a href="#" class="social-share-icon icon-qzone"></a>
+		    </div>
+			<div class=".share_null"></div>
+		</div>
+		<div class="share_bg" onclick="no_share();"></div>
+	</div>
+<script type="text/javascript">
+//获得slider插件对象
+var gallery = mui('.mui-slider');
+gallery.slider({
+  interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+});
+</script>
+<ul class="ul01">
+	<li class="li-01">黄锈石矿山</li>
+	<li class="li-02">
+		公司被认定为国家生态建材示范企业、国家“十一五”两化工业化和信息化）融合典范企业、
+		中国生态建材标准化先进企业、广东省清洁生产企业、  广东省低碳示范企业、  广东省自主创新标杆企业，  广东省诚信示范企业等， 
+		 获有中国建材建筑应用创新大奖......<span>全文</span>
+	</li>
+</ul>
+<div class="bg"></div>
+<ul class="ul02">
+	<li><span>产地</span><span>土耳其</span></li>
+	<li><span>联系电话</span><span>023-68686666</span></li>	
+</ul>
+<div class="bg"></div>
+<ul class="ul02">
+	<li><span>出产产品</span><span>黄锈石  少量金刚石</span></li>
+	<li><span>特色</span><span>品质高  产量稳定</span></li>
+	<li><span>附近港口</span><span>ANTALYA</span></li>
+	<li><span>运输条件</span><span>海运</span></li>
+</ul>
+<div class="content">
+<p class="p01"><span>推荐企业</span><a href="">更多</a></p>
+<ul class="ul03">
+	<li>
+		<div class="div-left"><img src="img/co1.png"/></div>
+		<div class="div-right">
+			<p class="p02">天玺石材有限公司</p>
+			<p class="p03">电话：15842411546</p>
+			<p class="p03">地址：云浮市云安县河口三街5号</p>
+		</div>
+	</li>
+	<li>
+		<div class="div-left"><img src="img/co2.png"/></div>
+		<div class="div-right">
+			<p class="p02">长寿县东盈石材厂</p>
+			<p class="p03">电话：15842411546</p>
+			<p class="p03">地址：长寿县下东街北区路144号</p>
+		</div>
+	</li>
+	<li>
+		<div class="div-left"><img src="img/co3.png"/></div>
+		<div class="div-right">
+			<p class="p02">长城国际石材有限公司</p>
+			<p class="p03">电话：15842411546</p>
+			<p class="p03">地址：长寿县下东街北区路144号</p>
+		</div>
+	</li>
+</ul>
+</div>
+<script>
+	var do_share = function(){
+		$('.share_bg').show();
+		$('#share_box').show();
+	}
+	var no_share = function(){
+		$('.share_bg').hide();
+		$('#share_box').hide();
+	}
+</script>
+</body>
+</html>

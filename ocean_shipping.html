@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>海运信息</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<link href="css/part/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/part/common.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/part/ocean shipping.css"/>
+		<link rel="stylesheet" type="text/css" href="css/cloak.css"/>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/part/common.js"></script>
+		<script type="text/javascript" src="./js/part/ocean shipping.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<script type="text/javascript" src="js/part/vue.js"></script>
+	</head>
+
+	<body>
+		<div id="myadd" v-cloak>
+		<header>
+			<div class="header">
+				<em id="out"></em>
+				<p>海运信息</p>
+			</div>
+		</header>
+		<main class="list">
+			<div class="sail_day">
+				<div>开船日期:</div>
+				<div>
+					<span>{{oiseAboardTime}}</span>
+				</div>
+			</div>
+			<div class="selivery">
+				<div>船期:</div>
+				<div>
+					<span>{{oisePeriod}}</span>
+				</div>
+			</div>
+			<div class="cabinet_volume">
+				<div>柜量:</div>
+				<div>
+					<span>{{oiseContainerNum}}HQ</span>
+				</div>
+			</div>
+			<div class="weight">
+				<div>提单重量:</div>
+				<div>
+					<span>{{oiseWeight}}吨</span>
+				</div>
+			</div>
+			<div class="ship_position">
+				<div>当前位置:</div>
+				<div>
+					<span>{{adress}}</span>
+				</div>
+			</div>
+			<div class="sail_over">
+				<div>预计到港时间:</div>
+				<div>
+					<span>{{oiseArriveTimePlan}}</span>
+				</div>
+			</div>
+		</main>
+		</div>
+	</body>
+
+</html>

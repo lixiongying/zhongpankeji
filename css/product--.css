@@ -1,0 +1,20 @@
+/*头部*/
+header{ background-color: #373737; height: 60px; display: flex; justify-content: flex-start; align-items: center;}
+header a{ width: 15%;}
+header div{ width: 70%; text-align: center; font-size: 20px; color: #fff;}
+.header-left img{ margin-top: 7px;}
+.header-right img{ margin: 15px 0 0 15px;}
+.img-wei{ position: absolute; left: 10px; top:18px;}
+
+/*主要内容*/
+.ul01{ display: flex; flex-wrap: wrap; margin: 0 8px 20px 8px;}
+.ul01 li{ width: 45%; border: 1px solid #eee; border-radius: 10px; margin: 15px 7px 0 7px; overflow: hidden;}
+.p01{ font-size: 16px; color: #484848;  padding-left: 10px; overflow: hidden; text-overflow: ellipsis; 
+display: -webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp: 1 ;}
+.mydiv{ display:flex; justify-content: center; margin: 20px 0 15px 0;}
+.div-left{ background-color: #ff3333; color: #fff; font-size: 14px; display: flex; align-items: center; 
+border-radius: 6px; padding: 2px 8px; margin-right: 10px;}
+.div-right{ background-color: #2c81d2; color: #fff; font-size: 14px; display: flex; align-items: center; 
+border-radius: 6px; padding: 2px 3px; padding: 2px 8px;}
+.img01{ width: 18px; height: 18px;}
+.img02{ width: 100%;}

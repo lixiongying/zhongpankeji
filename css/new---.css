@@ -1,0 +1,27 @@
+/*头部*/
+header{ background-color: #373737; height: 60px; display: flex; justify-content: flex-start;}
+header a{ width: 15%;}
+header div{ width: 82%;}
+.header-left img{ margin-top: 7px;}
+.header-right img{ margin: 15px 0 0 15px;}
+.header-center input{ border-radius: 30px; line-height: 40px; height: 40px; margin-top: 10px; width: 85%; 
+padding-left: 40px; font-size: 14px; border:none;}
+.header-center{ position: relative;}
+.img-wei{ position: absolute; left: 10px; top:18px;}
+
+/*内容*/
+.ul01{ display: flex;  border-bottom: 1px solid #eee; height: 40px; line-height: 40px;}
+.ul01 li{ width: 50%; text-align: center; font-size: 16px;}
+.active{ border-bottom: 1px solid #2c81d2; color: #2c81d2;}
+.ul02{ display: none;}
+.block{ display: block;}
+.ul02{ margin: 0 20px;}
+.ul02 li a{ display:flex; flex-wrap: wrap; border-bottom: 1px solid #eee; padding: 15px 0 8px 0;}
+.li-left{ width: 30%;}
+.li-right{ width: 66%; padding-left: 10px; }
+.li-left img{ width: 100%;}
+.p01{ font-size: 14px; color: #323232; height: 55px; overflow: hidden; text-overflow: ellipsis;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;
+}
+.p02{ color: #999; font-size: 14px; background: url(../img/yu.png) no-repeat left center; display: flex;
+ justify-content: space-between; padding-left: 22px; }
+ 

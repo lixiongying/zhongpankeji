@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/login.css" />
+		<link rel="stylesheet" href="./css/cloak.css" />
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/login.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/part/vue.js"></script>
+		<script type="text/javascript" src="js/session.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<title>登录</title>
+	</head>
+	<body>
+<div id="myadd" v-cloak>
+<header>
+	<a class="left" @click="out"><img src="img/return1.png"/></a>
+	<p class="center">登录</p>
+</header>
+<div class="bg_tis" v-show="err == 1">
+	<div>
+		<p>错误！请重试！</p>
+	</div>
+</div>
+<section>
+	<form>
+		<ul class="ul01">
+			<li>
+				<div class="div-left"><img src="img/login1.png" class="img01"/></div>
+				<div class="div-right"><input type="number" placeholder="请输入手机号" v-model="museUserName"/></div>
+			</li>
+			<li>
+				<div class="div-left"><img src="img/login2.png" class="img01"/></div>
+				<div class="div-right"><input type="password" placeholder="请输入密码" v-model="musePwd"/></div>
+			</li>
+			<li class="li03"><a href="telelogin.html">手机号快捷登录 </a></li>
+			<li class="li05">
+				<a><input type="button" value="登录" @click="on" class="sub-le"/></a>
+				<a href="register.html"><input type="button"  value="注册" class="sub-ri"/></a>
+			</li>
+		</ul>
+	</form>
+</section>
+</div>
+	</body>
+</html>

@@ -1,0 +1,102 @@
+[v-cloak]{
+        display:none !important;
+    }
+p {  
+	-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+  }
+body{ background-color: #f8f8f8;}
+.ban{  z-index: 10;touch-action: pan-y}
+.index-list{ 
+	width: 95%; 
+	background: red;  
+	margin: -15px auto auto auto; 
+	z-index: 100; 
+	position: relative;
+	text-align: center;
+	border-radius: 5px;
+	padding: 30px 10px 20px 10px;
+	background-color: #fff;
+	box-shadow: #eee 0px 4px 4px 0px;
+	-webkit-box-shadow: #eee 0px 4px 4px 0px;
+	}
+.ul-01{ display: flex;}
+.ul-01 li{ flex: 1;}
+.img03{ width: 50px; height: 50px;}
+.index-p01{ display: flex; 
+ line-height: 40px;justify-content:space-between; margin-top: 8px; background-size: 6px;}
+.index-p01 img{ width: 3px;height: 18px;position: relative;top: 4px;left:-5px;}
+.index-p01 span{ padding: 0 15px 0 10px;}
+.index-span1{ font-size: 15px; color: #323232;}
+
+.index-ul02{  display: flex; flex-wrap: wrap; margin:0 10px;} 
+.index-ul02 li{ width: 47%; margin: 5px; border-radius: 10px; border:1px solid #eee; background-color: #fff;
+ box-shadow: #eee 0px 2px 2px 0px; -webkit-box-shadow: #eee 0px 2px 2px 0px;}
+.index-ul02 li p{ padding: 0 5px;}
+.ul02-p02{ font-size: 14px; color: #323232; line-height: 25px; overflow: hidden;
+ text-overflow:ellipsis; display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2; height: 55px;
+}
+.ul02-p04{ font-size: 14px; color: #e91c2c;}
+.img02{ width: 100%; height: 7.5rem;}
+.index-ul03{ background-color: #fff;  padding: 0 15px;}
+.index-ul03 li{ width: 30rem; float: left;}
+.index-ul03 li a{ padding: 12px 10px 4px 0px; display: flex; border-bottom: 1px solid #eee; justify-content: flex-start; }
+.nobor{ border-bottom: none!important;}
+.div-left{ width: 30%;}
+.div-right{ width: 65%; margin-left: 10px;}
+.img01{ width: 90%;}
+.ul03-p01{ font-size: 16px; color: #333; margin-top: -7px;}
+.ul03-p02{ font-size: 13px; color: #999;}
+.footer{position: fixed;bottom: 0; left: 0; width: 100%; background: #fff;box-shadow:  0 3px 15px -3px rgba(0,0,0,0.6);}
+.footer-ul{ display: flex;  width: 100%; justify-content: center;  padding: 10px 0 8px 0;}
+.footer-ul li{ flex: 1; text-align: center;}
+.footer-ul li p{ line-height: 15px; margin-top: -5px;}
+.fot-img{ width: 23px; height: 23px;position: relative;top:1px;}
+.mui-slider-indicator .mui-active.mui-indicator {
+    background: #ff8400;
+}
+.mui-slider-indicator .mui-indicator{ background: #eee; box-shadow: 0 0 0px 0px #eee; 
+-webkit-box-shadow:0 0 0px 0px #eee;}
+.content3{padding-left: 10px; background-color: #fff;}
+
+.p-ht1{ line-height: 20px;}
+.iimg{
+	height: 13rem !important;
+}
+.iimg img{
+	height: 13rem !important;
+}
+.bg_tis{width: 100% !important;height: 100%;position: fixed !important;top: 0 !important;left: 0 !important;z-index: 100;}
+.bg_tis div{width: 24%;padding: 0 0 10px 0;background: rgba(0,0,0,0.8);position: absolute;top:25%;left: 36%;border-radius: 8px;overflow: hidden;}
+.bg_tis div p{width: 84%;margin: 0.5rem auto 0 auto;color: #fff;font-size: 1.1rem; font-size: 15px;text-align: center;}
+
+.content4{ background-color: #fff; margin-bottom: 65px; padding-left: 10px;}
+.upload_box img{
+	height: 90px;
+	width: 100%;	
+	/*border-radius: 5px;*/
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.upload>div>div:nth-last-child(1) img{
+	height: 90px;
+	width:100%;
+	/*border-radius: 5px;*/
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.upload_box{
+	width: 100%;
+	height: auto;
+	margin:  0 15px 0 0;
+	display: flex;
+	overflow-y: hidden;
+	overflow-x: scroll;
+}
+.upload_box::-webkit-scrollbar {
+        display: none;
+ }
+.p01{width: 9rem;height: 14px; font-size: 14px; margin:  0 0 0 10px; line-height: 14px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+.p02{width: 9rem; font-size: 13px; line-height: 25px; padding: 0 10px; margin-bottom: 8px; color: #ccc;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+.upload_box div{ border: 1px solid #eee;border-radius: 5px; margin: 0rem 0.5rem 0rem 0; box-shadow: #eee 0px 4px 4px 0px;
+	-webkit-box-shadow: #eee 0px 4px 4px 0px; }

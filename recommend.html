@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/recommend.css" />
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+		<script src="js/vue.js"></script>
+		<script src="js/page/recommend.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<title>推荐企业</title>
+	</head>
+	<body>
+<div id="recommend">
+<header>
+	<a class="header-left" @click="out"><img src="img/return1.png"/></a>
+	<div class="header-center"><img src="img/sou.png" class="img-wei"/>
+	<input type="text" placeholder="请输入关键词"/>
+	</div>
+</header>
+
+<ul class="ul01">
+	<li v-for="list in proList.stores" @click="go(list.mstoId)">
+		<!--<a href="business.html">-->
+		<img :src=url+list.mstoImage class="img01"/>
+		<p class="p01">{{list.mstoName}}</p>
+		<p class="p02">{{list.mainProducts}}</p>
+		<!--</a>-->
+	</li>
+	<!--<li>
+		<a href="business.html">
+		<img src="img/jian2.png" class="img01"/>
+		<p class="p01">达龙石材</p>
+		<p class="p02">达龙石材，专注白玉兰</p>
+		</a>
+	</li>
+	<li>
+		<a href="business.html">
+		<img src="img/jian3.png" class="img01"/>
+		<p class="p01">维银石材</p>
+		<p class="p02">主营产品：黄金钻（光面）、黄金麻（荔枝面）、红钻（电</p>
+		</a>
+	</li>
+	<li>
+		<a href="business.html">
+		<img src="img/jian4.png" class="img01"/>
+		<p class="p01">赵亮石材科技有限公司</p>
+		<p class="p02">杰德瑞石材主营大理石种类，奥特曼、白玉兰，金雀纹...</p>
+		</a>
+	</li>
+	<li>
+		<a href="business.html">
+		<img src="img/jian5.png" class="img01"/>
+		<p class="p01">维银石材</p>
+		<p class="p02">主营产品：黄金钻（光面）、黄金麻（荔枝面）、红钻（电</p>
+		</a>
+	</li>
+	<li>
+		<a href="business.html">
+		<img src="img/jian6.png" class="img01"/>
+		<p class="p01">赵亮石材科技有限公司</p>
+		<p class="p02">杰德瑞石材主营大理石种类，奥特曼、白玉兰，金雀纹...</p>
+		</a>
+	</li>-->
+</ul>
+
+</div>
+	</body>
+</html>

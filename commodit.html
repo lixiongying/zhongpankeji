@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/commodit.css" />
+		<link rel="stylesheet" href="./css/cloak.css" />
+		<script type="text/javascript" src="js/main.js"></script>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/vue.js"></script>
+		<script type="text/javascript" src="js/page/commodit.js" ></script>
+		<script src="js/part/mui.min.js"></script>
+		<title>清货信息</title>
+	</head>
+	<body>
+<div id="commodit" v-cloak>
+<header>
+	<a class="header-left" @click="out"><img src="img/return1.png"/></a>
+	<div class="header-center"><img src="img/sou.png" class="img-wei"/><input type="text" placeholder="请输入关键词"/></div>
+	<a href="#" class="header-right"><img src="img/add.png"/></a>
+</header>
+
+
+<section>
+	<ul class="ul01">
+		<li v-for="(list,index) in qingList.mgooImage" @click="go">
+			<a>
+				<img :src=url+qingList.mgooImage[index] class="img01"/>
+				<p class="p01">{{qingList.mgooClearExplain[index]}}</p>
+				<p class="p02">清货价：{{qingList.mgooMaximumPrice[index]}}/㎡</p>
+			</a>
+		</li>
+		<!--<li>
+			<a href="business.html">
+				<img src="img/qing2.png" class="img01"/>
+				<p class="p01">科比灰18厚防水背胶科比灰18厚防水背胶</p>
+				<p class="p02">清货价：253/㎡</p>
+			</a>
+		</li>
+		<li>
+			<a href="business.html">
+				<img src="img/qing3.png" class="img01"/>
+				<p class="p01">科比灰18厚防水背胶科比灰18厚防水背胶</p>
+				<p class="p02">清货价：253/㎡</p>
+			</a>
+		</li>
+		<li>
+			<a href="business.html">
+				<img src="img/qing4.png" class="img01"/>
+				<p class="p01">科比灰18厚防水背胶科比灰18厚防水背胶</p>
+				<p class="p02">清货价：253/㎡</p>
+			</a>
+		</li>
+		<li>
+			<a href="business.html">
+				<img src="img/qing5.png" class="img01"/>
+				<p class="p01">科比灰18厚防水背胶科比灰18厚防水背胶</p>
+				<p class="p02">清货价：253/㎡</p>
+			</a>
+		</li>
+		<li>
+			<a href="business.html">
+				<img src="img/qing6.png" class="img01"/>
+				<p class="p01">科比灰18厚防水背胶科比灰18厚防水背胶</p>
+				<p class="p02">清货价：253/㎡</p>
+			</a>
+		</li>
+		<li>
+			<a href="business.html">
+				<img src="img/qing7.png" class="img01"/>
+				<p class="p01">科比灰18厚防水背胶科比灰18厚防水背胶</p>
+				<p class="p02">清货价：253/㎡</p>
+			</a>
+		</li>
+		<li>
+			<a href="business.html">
+				<img src="img/qing8.png" class="img01"/>
+				<p class="p01">科比灰18厚防水背胶科比灰18厚防水背胶</p>
+				<p class="p02">清货价：253/㎡</p>
+			</a>
+		</li>-->
+	</ul>
+</section>
+
+</div>
+	</body>
+</html>

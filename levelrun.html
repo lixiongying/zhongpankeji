@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>业务管理</title>			
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/parter/levelrun.css"/>
+		<link rel="stylesheet" type="text/css" href="css/part/common.css" />
+		<link rel="stylesheet" href="./css/cloak.css" />
+		<script type="text/javascript" src="js/part/common.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/part/vue.js"></script>
+		<style>
+			html,
+			body {
+				height: 100%;
+				overflow: hidden;
+			}
+			.mui-bar {
+				-webkit-box-shadow: none;
+				box-shadow: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<em id="out" onclick="out()"></em>
+			<p>业务管理</p>
+			<em id="add" data-url='addbusiness.html' onclick="url(this)"></em>
+		</header>
+		<div class="center">
+			<div class="manger">
+				<div class="manger_desc">
+				  业务员
+				</div>
+				
+				<div class="manger_next">
+					<img src="img/information/go.png"/>
+				</div>
+				<div class="manger_name">
+					李小戏
+				</div>
+			</div>
+			<div id="slider" class="mui-slider mui-fullscreen">
+				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div class="mui-scroll scorll_item">
+						<a class="mui-control-item mui-active borderColor" href="#item1mobile">										
+								已合作								
+						</a>
+						<a class="mui-control-item" href="#item2mobile">									
+								带合作		
+						
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll scorll_ul">
+								<div class="scorll_ul_li">
+									<div class="scorll_liImg">
+										<img src="img/test/j1444811715842.png"/>
+									</div>
+									<div class="scorll_lione">
+										阿德伦石材
+									</div>
+									<div class="scorll_litwo">
+										2015.10.08 11:20
+									</div>
+								</div>
+								<div class="scorll_ul_li">
+									<div class="scorll_liImg">
+										<img src="img/test/j1444811715842.png"/>
+									</div>
+									<div class="scorll_lione">
+										阿德伦石材
+									</div>
+									<div class="scorll_litwo">
+										2015.10.08 11:20
+									</div>
+								</div>
+								<div class="scorll_ul_li">
+									<div class="scorll_liImg">
+										<img src="img/test/j1444811715842.png"/>
+									</div>
+									<div class="scorll_lione">
+										阿德伦石材
+									</div>
+									<div class="scorll_litwo">
+										2015.10.08 11:20
+									</div>
+								</div>
+								<div class="scorll_ul_li">
+									<div class="scorll_liImg">
+										<img src="img/test/j1444811715842.png"/>
+									</div>
+									<div class="scorll_lione">
+										阿德伦石材
+									</div>
+									<div class="scorll_litwo">
+										2015.10.08 11:20
+									</div>
+								</div>
+								<div class="scorll_ul_li">
+									<div class="scorll_liImg">
+										<img src="img/test/j1444811715842.png"/>
+									</div>
+									<div class="scorll_lione">
+										阿德伦石材
+									</div>
+									<div class="scorll_litwo">
+										2015.10.08 11:20
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-scroll scorll_ul">
+									<div class="scorll_ul_li">
+										<div class="scorll_liImg">
+											<img src="img/test/j1444811715842.pngs"/>
+										</div>
+										<div class="scorll_lione">
+											奧特曼
+										</div>
+										<div class="scorll_litwo">
+											123*152*1.3mm
+										</div>
+									</div>
+									<div class="scorll_ul_li">
+										<div class="scorll_liImg">
+											<img src="img/test/j1444811715842.pngs"/>
+										</div>
+										<div class="scorll_lione">
+											奧特曼
+										</div>
+										<div class="scorll_litwo">
+											123*152*1.3mm
+										</div>
+									</div>
+									<div class="scorll_ul_li">
+										<div class="scorll_liImg">
+											<img src="img/test/j1444811715842.pngs"/>
+										</div>
+										<div class="scorll_lione">
+											奧特曼
+										</div>
+										<div class="scorll_litwo">
+											123*152*1.3mm
+										</div>
+									</div>
+									<div class="scorll_ul_li">
+										<div class="scorll_liImg">
+											<img src="img/test/j1444811715842.pngs"/>
+										</div>
+										<div class="scorll_lione">
+											奧特曼
+										</div>
+										<div class="scorll_litwo">
+											123*152*1.3mm
+										</div>
+									</div>
+									<div class="scorll_ul_li">
+										<div class="scorll_liImg">
+											<img src="img/test/j1444811715842.pngs"/>
+										</div>
+										<div class="scorll_lione">
+											奧特曼
+										</div>
+										<div class="scorll_litwo">
+											123*152*1.3mm
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<script src="./js/part/mui.min.js"></script>			
+		<script type="text/javascript" src="js/main.js"></script>
+		
+
+	</body>
+
+</html>

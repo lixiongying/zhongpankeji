@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>驳船信息</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/part/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/part/common.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/part/barge.css"/>
+		<link rel="stylesheet" href="./css/cloak.css" />
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/part/common.js"></script>
+		<script type="text/javascript" src="js/part/barge.js"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/part/mui.min.js"></script>
+		<script type="text/javascript" src="js/part/vue.js"></script>
+		<script src="js/part/mui.min.js"></script>
+	</head>
+
+	<body>
+		<div id="myadd" v-cloak>
+		<header>
+			<div class="header">
+				<em id="out"></em>
+				<p>驳船信息</p>
+			</div>
+		</header>
+		<main>
+			<div class="address">
+				<div>中转站:</div>
+				<div>
+					<span>{{oitrPortName}}</span>
+				</div>
+			</div>
+			<div class="barge">
+				<div>预计转驳船时间:</div>
+				<div>
+					<span>{{oitrTranTimePlan}}</span>
+				</div>
+			</div>
+			<div class="over">
+				<div>预计到港时间:</div>
+				<div>
+					<span>{{oitrTranArriTimePlan}}</span>
+				</div>
+			</div>
+		</main>
+		</div>
+	</body>
+
+</html>

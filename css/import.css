@@ -1,0 +1,30 @@
+/*头部*/
+header{ background-color: #373737; height: 60px; display: flex; justify-content: flex-start; line-height: 60px;}
+header a{ width: 20%;}
+.left img{ margin-top: 16px; width: 26px; height:26px; margin-left: 12px;}
+.center{ font-size: 18px; color: #fff; width: 60%; text-align: center;}
+
+/*主要内容*/
+body{ background-color: #f8f8f8;}
+.ul01{ display: flex; border-bottom: 1px solid #eee; height: 50px; line-height: 50px; background-color: #fff;}
+.ul01 li{ width: 50%; text-align: center; font-size: 16px;}
+.active{ color: #2c81d2;}
+.ul02{ display: none; margin: 8px 10px 20px 10px; }
+.block{ display: block;}
+.ul02 li{border-bottom: 10px solid #eee; padding: 3px 0px 8px 0px; border:1px solid #eee; border-radius: 10px;
+ margin: 8px 0; background-color: #fff;}
+.ul02 li:last-child{ border-bottom: none;}
+.li-left{ width: 30%;}
+.li-right{ width: 66%; padding-left: 10px; }
+.li-left img{ width: 100%;height: 5rem;}
+.p01{ font-size: 14px; color: #323232; }
+.p02{ color: #7f7f7f; font-size: 12px; overflow: hidden; text-overflow: ellipsis;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3; }
+.li-ht{ line-height: 30px;}
+.mydiv{ display: flex; flex-wrap: wrap; border-bottom: 1px solid #eee; overflow: hidden; line-height: 50px; 
+padding: 0 20px;}
+.div-left{ width: 70%;}
+.div-right{ width: 30%; text-align: right; color: #2c81d2;}
+.div{ display:flex; flex-wrap: wrap; margin-top: 15px; padding: 0 20px;}
+.col-red{ color: #ff3333;}
+.bor{ width: 30px; margin-top: -10px; border: 1px solid #2c81d2; display: none;}
+.bor-block{ display: block;}

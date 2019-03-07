@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>石材百科</title>
+    
+    <link href="css/part/mui.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" type="text/css" href="css/part/common.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/part/check.css"/>
+    <link rel="stylesheet" href="./css/cloak.css" />
+    
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/part/check.js"></script>
+    <script type="text/javascript" src="js/part/vue.js"></script>
+    <script src="js/part/mui.min.js"></script>
+    <script src="js/part/mui.min.js"></script>
+  
+</head>
+<body>
+	<div id="myadd" >
+	<header >
+		<div class="header_top">
+			<div class="header_top_out"><img src="./img/common/out_h.png" @click="out" alt="" /></div>
+			<div class="header_top_sou">
+				<div>
+					<i></i>
+					<input name="addComment" placeholder="输入石材名称" autofocus v-model="goodName"></inptu>
+					
+				</div>
+			</div>
+			<div class="sou_button" @click="init_one">搜索</div>
+		</div>
+		<div class="header_bottom">
+			<div>
+				<div>
+					<p>推荐</p>
+				</div>
+				<div>
+					<p>黄金麻</p>
+					<p>芝麻白</p>
+				</div>
+			</div>
+			<div>
+				<div>
+					<p>历史记录<img src="img/common/trash.png" alt="" /></p>
+					
+				</div>
+				<div>
+					<p>黄金麻</p>
+					<p>芝麻白</p>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="bg_tis" v-show="err == 1">
+		<div>
+			<p>该字母无产品信息!</p>
+		</div>
+	</div>
+	<main>
+		<div v-for="(x,index) in tetter_All" v-show="tetter_All[index].length != 0">
+			<div class="main_top"><p>{{tetter[index]}}</p><p>更多</p></div>
+			<div class="main_bottom">
+				<div class="main_list" v-for="k in tetter_All[index]" @click="go_goods(k.mgooId)">
+					<div>
+						<img :src="url+k.mgooImage" alt="" />
+					</div>
+					<div><p>{{k.mgooName}}</p></div>
+				</div>
+			</div>
+		</div>
+	</main>
+</div>
+</body>
+</html>
